@@ -24,10 +24,10 @@ export default function CTASection() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Ready to Transform Your
             <br />
-            <span className="gradient-text">IT Infrastructure?</span>
+            <span className="gradient-text">IT Infrastructure ?</span>
           </h2>
           <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Get in touch with our experts to discuss your requirements. We provide customized solutions for all government IT needs.
+            Get in touch with our experts to discuss your requirements. We provide customized solutions for all business IT needs.
           </p>
 
           {/* CTA Buttons */}
@@ -42,7 +42,7 @@ export default function CTASection() {
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
             </Link>
-            <a href="tel:+917552665544">
+            <a href="tel:+916263387912">
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -79,7 +79,7 @@ export default function CTASection() {
               </div>
               <div className="text-left">
                 <div className="text-sm text-muted-foreground">Email Us</div>
-                <div className="font-semibold text-foreground">info@psassociates.in</div>
+                <div className="font-semibold text-foreground">info@psaissociates.in</div>
               </div>
             </motion.a>
           </div>
