@@ -6,8 +6,8 @@ import { Award, Clock, ShieldCheck, ThumbsUp, TrendingUp, Headphones } from 'luc
 const features = [
   {
     icon: Award,
-    title: '15+ Years Experience',
-    description: 'Deep expertise in serving government IT needs since 2005.',
+    title: '5+ Years Experience',
+    description: 'Deep expertise in serving  IT needs since 2015.',
   },
   {
     icon: ShieldCheck,
@@ -32,7 +32,7 @@ const features = [
   {
     icon: Headphones,
     title: '24/7 Support',
-    description: 'Round-the-clock technical support across Madhya Pradesh.',
+    description: 'Round-the-clock technical support .',
   },
 ];
 
@@ -80,15 +80,15 @@ export default function WhyChooseUsSection() {
               transition={{ duration: 0.5 }}
             >
               <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                Why PS Associates
+                Why PSAI Associates
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
                 The Trusted Choice for
                 <br />
-                <span className="gradient-text">Government IT Solutions</span>
+                <span className="gradient-text">Business IT Solutions</span>
               </h2>
               <p className="text-muted-foreground text-lg mb-8">
-                As Madhya Pradesh's leading IT hardware and manpower provider, we bring unmatched expertise, reliability, and commitment to every government project.
+                We provide IT & IT enabled services for a broad range of verticals. We have been in business for more than two decades and have been successfully serving the IT requirements of our clients.
               </p>
             </motion.div>
 
