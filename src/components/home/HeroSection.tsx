@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import FloatingTech from '../3d/FloatingTech';
 
 const stats = [
-  { value: '5+', label: 'Years Experience', icon: Shield },
+  { value: '25+', label: 'Years Experience', icon: Shield },
   { value: '50+', label: 'Projects Delivered', icon: Monitor },
-  { value: '200+', label: 'Manpower Deployed', icon: Users },
+  { value: '1000+', label: 'Manpower Deployed', icon: Users },
 ];
 
 export default function HeroSection() {
@@ -63,13 +63,13 @@ export default function HeroSection() {
           </motion.p>
 
           {/* CTA Buttons */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
-          >
-            <Link to="/products">
+          > */}
+            {/* <Link to="/products">
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -88,7 +88,7 @@ export default function HeroSection() {
                 Get a Quote
               </motion.button>
             </Link>
-          </motion.div>
+          </motion.div> */}
 
           {/* Stats */}
           <motion.div
