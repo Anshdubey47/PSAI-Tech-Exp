@@ -72,7 +72,7 @@ export default function Manpower() {
             </h1>
 
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              XtraNet delivers trained and reliable manpower to support government,
+              PS ASSOCIATES delivers trained and reliable manpower to support government,
               semi-government, and enterprise IT projects, ensuring operational
               continuity and service excellence across India.
             </p>
@@ -116,7 +116,7 @@ export default function Manpower() {
             </h2>
 
             <p className="text-muted-foreground mb-6">
-              Engage XtraNet for structured, compliant, and scalable manpower deployment
+              Engage PS ASSOCIATES for structured, compliant, and scalable manpower deployment
               aligned with project requirements and service-level commitments.
             </p>
 
