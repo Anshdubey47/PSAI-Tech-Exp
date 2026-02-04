@@ -74,7 +74,7 @@ export default function Footer() {
                 <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-4 h-4" />
                 </div>
-                <span className="text-sm">MP Nagar, Zone 1<br />Bhopal, Madhya Pradesh 462011</span>
+                <span className="text-sm">1A, Ist Floor, Metro Plaza, E-5,<br /> Arera Colony, Bhopal, M.P., India,<br /> PIN CODE 462016</span>
               </div>
             </div>
           </div>

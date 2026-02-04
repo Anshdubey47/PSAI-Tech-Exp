@@ -7,11 +7,11 @@
 @layer base {
   :root {
     /* Background */
-    --background: 0 0% 100%;
+    --background: 40 20% 97%;
     --foreground: 220 15% 20%;
 
     /* Cards */
-    --card: 0 0% 100%;
+    --card: --card: 0 0% 99%;
     --card-foreground: 220 15% 20%;
 
     /* Primary (Blue Theme) */
@@ -33,7 +33,7 @@
     --muted-foreground: 215 15% 45%;
 
     /* Border */
-    --border: 210 15% 85%;
+    --border: 40 15% 88%;
     --input: 210 15% 85%;
     --ring: 215 90% 45%;
 
