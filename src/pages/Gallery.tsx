@@ -24,61 +24,65 @@ import i14 from '@/assets/images/gallery/i14.png';
 
 const gallery = [
   {
-    img: i1,
-    title: 'Edu. Minister of Ethiopia',
+    img: i13,
+    title: 'With Co-op Minister',
+  },
+  
+  {
+    img: i11,
+    title: 'Welcoming CM of MP',
+  },
+  
+  {
+    img: i12,
+    title: 'With Co-op Minister',
+  },
+  
+  {
+    img: i14,
+    title: 'Installation of First ATM',
   },
   {
-    img: i2,
-    title: 'Wedding of Hon. JV Singh',
-  },
-  {
-    img: i3,
-    title: 'Meeting Co-op Minister',
-  },
-  {
-    img: i4,
-    title: 'Our Team',
-  },
-  {
-    img: i5,
-    title: 'Tips about MP Krishi',
-  },
-  {
-    img: i6,
-    title: 'Office Celebrations',
-  },
-  {
-    img: i7,
-    title: 'Pooja of Metro Office',
+    img: i9,
+    title: 'Conoration as BITOAA President',
   },
   {
     img: i8,
     title: 'BITOAA President',
   },
   {
-    img: i9,
-    title: 'BITOAA AGMs',
-  },
-  {
     img: i10,
     title: 'BITOAA AGMs',
   },
   {
-    img: i11,
-    title: 'Welcoming CM of MP',
+    img: i5,
+    title: 'Tips about MP Krishi',
   },
   {
-    img: i12,
-    title: 'With Co-op Minister',
+    img: i1,
+    title: 'Edu. Minister of Ethiopia',
   },
   {
-    img: i13,
-    title: 'With Co-op Minister',
+    img: i3,
+    title: 'Meeting Co-op Minister',
+  },
+   {
+    img: i6,
+    title: 'Office Celebrations',
   },
   {
-    img: i14,
-    title: 'Installation of First ATM',
+    img: i2,
+    title: 'Wedding of Hon. JV Singh',
   },
+ 
+  {
+    img: i7,
+    title: 'Meeting with CM of Madhya Pradesh',
+  },
+  
+  
+  
+  
   
 ];
 
