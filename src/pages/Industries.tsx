@@ -17,56 +17,41 @@ const industries = [
   },
   {
     id: '03',
-    title: 'Life Science',
-    desc: 'Research and innovation for biotechnology and pharmaceutical companies to generate the best results.',
-  },
-  {
-    id: '04',
     title: 'Manufacturing',
     desc: 'Collect raw materials and produce the best products as per market demand.',
   },
   {
-    id: '05',
+    id: '04',
     title: 'BFSI',
     desc: 'Maintain strong financial and investment support for business growth and stability.',
   },
   {
-    id: '06',
-    title: 'Mining',
-    desc: 'Extract and preserve geological materials to maintain long-term economic benefits.',
-  },
-  {
-    id: '07',
+    id: '05',
     title: 'Agribusiness',
     desc: 'Support farming production, processing, and agricultural development.',
   },
   {
-    id: '08',
+    id: '06',
     title: 'Healthcare',
     desc: 'Maintain quality services within medical treatment and wellness sectors.',
   },
   {
-    id: '09',
-    title: 'Logistics & Transport',
-    desc: 'Support production, storage, and delivery services efficiently.',
-  },
-  {
-    id: '10',
+    id: '07',
     title: 'Aviation',
     desc: 'Maintain air travel operations, infrastructure, and airline services.',
   },
   {
-    id: '11',
+    id: '08',
     title: 'Telecom',
     desc: 'Transmit data and manage telecommunication services across industries.',
   },
   {
-    id: '12',
+    id: '09',
     title: 'Retail',
     desc: 'Support companies that sell goods and services to consumers.',
   },
   {
-    id: '13',
+    id: '10',
     title: 'Education',
     desc: 'Provide educational services for all levels of learning.',
   },

@@ -3,7 +3,6 @@ import Layout from '@/components/layout/Layout';
 
 /* ========== PARTNER LOGOS ========== */
 
-// Existing
 import hpe from '@/assets/images/partners/hpe.png';
 import tcs from '@/assets/images/partners/tcs.png';
 import microsoft from '@/assets/images/partners/microsoft.png';
@@ -12,8 +11,6 @@ import samsung from '@/assets/images/partners/samsung.png';
 import dlink from '@/assets/images/partners/dlink.png';
 import cisco from '@/assets/images/partners/cisco.png';
 import epson from '@/assets/images/partners/epson.png';
-
-// New (From Screenshot)
 import array from '@/assets/images/partners/array.png';
 import aws from '@/assets/images/partners/aws.png';
 import cloudbolt from '@/assets/images/partners/cloudbolt.png';
@@ -29,6 +26,11 @@ import redhat from '@/assets/images/partners/redhat.png';
 import sap from '@/assets/images/partners/sap.png';
 import versa from '@/assets/images/partners/versa.png';
 import vmware from '@/assets/images/partners/vmware.png';
+import people from '@/assets/images/partners/people.png';
+import brother from '@/assets/images/partners/brother.png';
+import acer from '@/assets/images/partners/acer.png';
+import globus from '@/assets/images/partners/globus.png';
+
 
 /* ========== CLIENT LOGOS ========== */
 
@@ -44,7 +46,17 @@ import c9 from '@/assets/images/clients/c9.png';
 import c10 from '@/assets/images/clients/c10.png';
 import c11 from '@/assets/images/clients/c11.png';
 import c12 from '@/assets/images/clients/c12.png';
-
+import c13 from '@/assets/images/clients/c13.png';
+import c14 from '@/assets/images/clients/c14.png';
+import c15 from '@/assets/images/clients/c15.png';
+import c16 from '@/assets/images/clients/c16.png';
+import c17 from '@/assets/images/clients/c17.png';
+import c18 from '@/assets/images/clients/c18.png';
+import c19 from '@/assets/images/clients/c19.png';
+import c20 from '@/assets/images/clients/c20.png';
+import c21 from '@/assets/images/clients/c21.png';
+import c22 from '@/assets/images/clients/c22.png';
+import c23 from '@/assets/images/clients/c23.png';
 /* ========== PARTNERS DATA ========== */
 
 const partners = [
@@ -163,6 +175,27 @@ const partners = [
     logo: vmware,
     desc: 'Virtualization Partner',
   },
+  {
+  name: 'Globus',
+  logo: globus,
+  desc: 'Enterprise IT & Infrastructure Solutions Partner',
+},
+{
+  name: 'PeopleLink',
+  logo: people,
+  desc: 'Unified Communications & Collaboration Partner',
+},
+{
+  name: 'Acer',
+  logo: acer,
+  desc: 'Commercial Computing & Hardware Solutions Partner',
+},
+{
+  name: 'Brother',
+  logo: brother,
+  desc: 'Printing & Office Automation Solutions Partner',
+},
+
 ];
 
 /* ========== CLIENT DATA ========== */
@@ -180,6 +213,17 @@ const clients = [
   { name: 'Client 10', logo: c10 },
   { name: 'Client 11', logo: c11 },
   { name: 'Client 12', logo: c12 },
+  { name: 'Client 13', logo: c13 },
+  { name: 'Client 14', logo: c14 },
+  { name: 'Client 15', logo: c15 },
+  { name: 'Client 16', logo: c16 },
+  { name: 'Client 17', logo: c17 },
+  { name: 'Client 18', logo: c18 },
+  { name: 'Client 19', logo: c19 },
+  { name: 'Client 20', logo: c20 },
+  { name: 'Client 21', logo: c21 },
+  { name: 'Client 22', logo: c22 },
+  { name: 'Client 23', logo: c23 },
 ];
 
 /* ========== COMPONENT ========== */

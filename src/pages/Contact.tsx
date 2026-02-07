@@ -89,7 +89,7 @@ export default function Contact() {
                       icon: MapPin,
                       label: 'Marketing Office - Mumbai',
                       value:
-                        'F-153, Dreams The Mall, LBS Marg, Bhandup (W), Mumbai - 400078',
+                        'B-702, shalom garden, near galaxy hospital, THANE, MAHARASHTRA 401107 India',
                     },
                     {
                       icon: MapPin,
