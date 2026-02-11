@@ -38,7 +38,7 @@ const features = [
 ];
 
 const stats = [
-  { value: 200, label: 'Projects Completed', suffix: '+' },
+  { value: 500, label: 'Projects Completed', suffix: '+' },
   { value: 200, label: 'Govt. Departments', suffix: '+' },
   { value: 2000, label: 'Manpower Deployed', suffix: '+' },
   { value: 100, label: 'Annual Turnover', prefix: '₹', suffix: 'Cr+' },
