@@ -76,6 +76,11 @@ const services = [
     title: "Software Product Engineering",
     desc: "End-to-end software product lifecycle management from concept and design to deployment using agile and DevOps practices.",
   },
+  {
+  id: "15",
+  title: "Networking & AMC",
+  desc: "PS Associates offers comprehensive networking solutions and reliable Annual Maintenance Contracts (AMC) designed to maintain system efficiency, enhance network security, and ensure continuous business operations.",
+},
 ];
 
 /* Animations */

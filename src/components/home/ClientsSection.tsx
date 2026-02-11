@@ -40,7 +40,7 @@ export default function ClientsSection() {
           </h3>
           <p className="text-muted-foreground">
             Serving{' '}
-            <AnimatedNumber value={130} suffix="+" className="inline-block" />
+            <AnimatedNumber value={200} suffix="+" className="inline-block" />
             {' '}departments and public institutions
           </p>
         </motion.div>
