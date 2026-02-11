@@ -89,8 +89,13 @@ const itemAnim = {
   },
 };
 
+type GalleryItem = {
+  img: string;
+  title: string;
+};
+
 export default function Gallery() {
-  const [selected, setSelected] = useState<any>(null);
+  const [selected, setSelected] = useState<GalleryItem | null>(null);
 
   return (
     <Layout>

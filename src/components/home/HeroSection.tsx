@@ -2,11 +2,12 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Shield, Users, Monitor } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import FloatingTech from '../3d/FloatingTech';
+import AnimatedNumber from './AnimatedNumber';
 
 const stats = [
-  { value: '25+', label: 'Years Experience', icon: Shield },
-  { value: '50+', label: 'Projects Delivered', icon: Monitor },
-  { value: '1000+', label: 'Manpower Deployed', icon: Users },
+  { value: 25, suffix: '+', label: 'Years Experience', icon: Shield },
+  { value: 50, suffix: '+', label: 'Projects Delivered', icon: Monitor },
+  { value: 1000, suffix: '+', label: 'Manpower Deployed', icon: Users },
 ];
 
 export default function HeroSection() {
@@ -108,7 +109,11 @@ export default function HeroSection() {
                 <div className="w-12 h-12 mx-auto mb-4 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
                   <stat.icon className="w-6 h-6 text-primary" />
                 </div>
-                <div className="text-3xl font-bold gradient-text mb-1">{stat.value}</div>
+                <AnimatedNumber
+                  value={stat.value}
+                  suffix={stat.suffix}
+                  className="text-3xl font-bold gradient-text mb-1"
+                />
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
               </motion.div>
             ))}

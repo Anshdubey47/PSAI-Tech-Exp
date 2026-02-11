@@ -2,11 +2,12 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Award, Clock, ShieldCheck, ThumbsUp, TrendingUp, Headphones } from 'lucide-react';
+import AnimatedNumber from './AnimatedNumber';
 
 const features = [
   {
     icon: Award,
-    title: '5+ Years Experience',
+    title: '25+ Years Experience',
     description: 'Deep expertise in serving  IT needs since 2015.',
   },
   {
@@ -34,6 +35,13 @@ const features = [
     title: '24/7 Support',
     description: 'Round-the-clock technical support .',
   },
+];
+
+const stats = [
+  { value: 500, label: 'Projects Completed', suffix: '+' },
+  { value: 50, label: 'Govt. Departments', suffix: '+' },
+  { value: 1000, label: 'Manpower Deployed', suffix: '+' },
+  { value: 100, label: 'Annual Turnover', prefix: '₹', suffix: 'Cr+' },
 ];
 
 function FeatureCard({ feature, index }: { feature: typeof features[0]; index: number }) {
@@ -111,12 +119,7 @@ export default function WhyChooseUsSection() {
               className="glow-card p-8 mb-8"
             >
               <div className="grid grid-cols-2 gap-6">
-                {[
-                  { value: '500+', label: 'Projects Completed' },
-                  { value: '50+', label: 'Govt. Departments' },
-                  { value: '2000+', label: 'Manpower Deployed' },
-                  { value: '₹100Cr+', label: 'Annual Turnover' },
-                ].map((stat, index) => (
+                {stats.map((stat, index) => (
                   <motion.div
                     key={stat.label}
                     initial={{ opacity: 0, y: 20 }}
@@ -125,9 +128,12 @@ export default function WhyChooseUsSection() {
                     transition={{ delay: 0.2 + index * 0.1 }}
                     className="text-center p-4 rounded-lg bg-background/50"
                   >
-                    <div className="text-2xl md:text-3xl font-bold gradient-text mb-1">
-                      {stat.value}
-                    </div>
+                    <AnimatedNumber
+                      value={stat.value}
+                      prefix={stat.prefix}
+                      suffix={stat.suffix}
+                      className="text-2xl md:text-3xl font-bold gradient-text mb-1"
+                    />
                     <div className="text-xs text-muted-foreground">{stat.label}</div>
                   </motion.div>
                 ))}

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import AnimatedNumber from './AnimatedNumber';
 
 const clients = [
   'Police Department',
@@ -38,7 +39,9 @@ export default function ClientsSection() {
             <span className="gradient-text"> Public Sector Organizations</span>
           </h3>
           <p className="text-muted-foreground">
-            Serving 130+ departments and public institutions
+            Serving{' '}
+            <AnimatedNumber value={130} suffix="+" className="inline-block" />
+            {' '}departments and public institutions
           </p>
         </motion.div>
 

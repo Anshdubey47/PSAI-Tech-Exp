@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import logo from '@/assets/logo.jpeg';
 const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
@@ -32,10 +33,7 @@ export default function Navbar() {
   }, [location]);
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5, ease: 'easeOut' }}
+    <nav
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         isScrolled 
@@ -51,9 +49,11 @@ export default function Navbar() {
               whileHover={{ scale: 1.05 }}
               className="relative"
             >
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">PS</span>
-              </div>
+              <img
+                src={logo}
+                alt="PS Associates Logo"
+                className="w-10 h-10 rounded-lg object-cover"
+              />
               <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary to-accent blur-lg opacity-50 group-hover:opacity-75 transition-opacity" />
             </motion.div>
             <div className="flex flex-col">
@@ -157,6 +157,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </nav>
   );
 }

@@ -59,31 +59,31 @@ function FloatingDesktop({ position }: { position: [number, number, number] }) {
   );
 }
 
-function FloatingPrinter({ position }: { position: [number, number, number] }) {
-  const groupRef = useRef<THREE.Group>(null);
+// function FloatingPrinter({ position }: { position: [number, number, number] }) {
+//   const groupRef = useRef<THREE.Group>(null);
   
-  useFrame((state) => {
-    if (groupRef.current) {
-      groupRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.25) * 0.1;
-    }
-  });
+//   useFrame((state) => {
+//     if (groupRef.current) {
+//       groupRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.25) * 0.1;
+//     }
+//   });
 
-  return (
-    <Float speed={1.8} rotationIntensity={0.4} floatIntensity={0.6}>
-      <group position={position} ref={groupRef}>
-        <Box args={[1.8, 0.8, 1.2]} position={[0, 0, 0]}>
-          <meshStandardMaterial color="#1a365d" metalness={0.7} roughness={0.3} />
-        </Box>
-        <Box args={[1.5, 0.05, 0.8]} position={[0, 0.42, 0.3]}>
-          <meshStandardMaterial color="#f0f0f0" metalness={0.1} roughness={0.8} />
-        </Box>
-        <Box args={[0.4, 0.2, 0.05]} position={[0.5, 0.5, -0.58]}>
-          <meshStandardMaterial color="#00d4ff" emissive="#00d4ff" emissiveIntensity={0.4} />
-        </Box>
-      </group>
-    </Float>
-  );
-}
+//   return (
+//     <Float speed={1.8} rotationIntensity={0.4} floatIntensity={0.6}>
+//       <group position={position} ref={groupRef}>
+//         <Box args={[1.8, 0.8, 1.2]} position={[0, 0, 0]}>
+//           <meshStandardMaterial color="#1a365d" metalness={0.7} roughness={0.3} />
+//         </Box>
+//         <Box args={[1.5, 0.05, 0.8]} position={[0, 0.42, 0.3]}>
+//           <meshStandardMaterial color="#f0f0f0" metalness={0.1} roughness={0.8} />
+//         </Box>
+//         <Box args={[0.4, 0.2, 0.05]} position={[0.5, 0.5, -0.58]}>
+//           <meshStandardMaterial color="#00d4ff" emissive="#00d4ff" emissiveIntensity={0.4} />
+//         </Box>
+//       </group>
+//     </Float>
+//   );
+// }
 
 function GlowingSphere({ position, color }: { position: [number, number, number]; color: string }) {
   return (
@@ -142,7 +142,7 @@ export default function FloatingTech() {
         <spotLight position={[0, 10, 0]} intensity={0.8} color="#ffffff" />
         <FloatingLaptop position={[-4, 1, -2]} />
         <FloatingDesktop position={[4, 0.5, -3]} />
-        <FloatingPrinter position={[0, -2, -1]} />
+        {/* <FloatingPrinter position={[0, -2, -1]} /> */}
         <GlowingSphere position={[-3, -1, 1]} color="#00d4ff" />
         <GlowingSphere position={[3, 2, 0]} color="#8b5cf6" />
         <GlowingSphere position={[5, -1, 2]} color="#00d4ff" />

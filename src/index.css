@@ -91,7 +91,7 @@
   /* Cards */
   .glow-card {
     @apply relative rounded-xl border border-border bg-card p-6;
-    box-shadow: 0 2px 12px rgb(0 0 0 / 0.08);
+    box-shadow: 0 2px 12px rgba(214, 56, 56, 0.08);
     transition: all 0.25s ease;
   }
 
