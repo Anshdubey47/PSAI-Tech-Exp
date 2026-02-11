@@ -4,62 +4,77 @@ import Layout from "@/components/layout/Layout";
 /* Banner Image */
 import servicesBg from "@/assets/images/industriesbg.png";
 
-/* Services Data (from PDF, summarized structurally — NOT UI-heavy text blocks) */
+/* Services Data (Top 3 + existing, continuous numbering) */
 const services = [
   {
     id: "01",
+    title: "Smart Training Solutions",
+    desc: "PS Associates delivers smart training solutions through digital learning platforms, structured programs, and technology-enabled education initiatives that improve employability and skill development.",
+  },
+  {
+    id: "02",
+    title: "System Integration for Digital India",
+    desc: "End-to-end system integration services aligned with Digital India initiatives, combining software platforms, infrastructure, and skilled resources to deliver scalable transformation solutions.",
+  },
+  {
+    id: "03",
+    title: "Services Consultancy",
+    desc: "Professional services consultancy services offering recruitment, deployment, monitoring, and retention of skilled personnel with complete confidentiality and ethical compliance.",
+  },
+  {
+    id: "04",
     title: "Application Development & Maintenance",
     desc: "End-to-end application design, development, testing, integration, and maintenance services that enhance system life, reduce downtime, and improve operational efficiency.",
   },
   {
-    id: "02",
-    title: "Cloud & Infrastructure Services",
-    desc: "Migration, optimization, and management of cloud-enabled, software-defined infrastructure to improve scalability, performance, and business agility.",
-  },
-  {
-    id: "03",
-    title: "CX Transformation",
-    desc: "Customer experience transformation through streamlined sales, service workflows, and intelligent engagement across the entire customer journey.",
-  },
-  {
-    id: "04",
-    title: "Data Analytics",
-    desc: "Data-driven decision-making using analytics, visualization, AI, ML, and unified data platforms to unlock business value and insights.",
-  },
-  {
     id: "05",
+    title: "Cloud & Infrastructure Services",
+    desc: "Migration, optimization, and management of cloud-enabled and software-defined infrastructure to improve scalability, performance, and business agility.",
+  },
+  {
+    id: "06",
+    title: "CX Transformation",
+    desc: "Customer experience transformation through optimized sales, service workflows, and intelligent engagement across the customer journey.",
+  },
+  {
+    id: "07",
+    title: "Data Analytics",
+    desc: "Advanced analytics, visualization, AI, and ML solutions that enable data-driven decision-making and unlock actionable business insights.",
+  },
+  {
+    id: "08",
     title: "Enterprise IT Security & Integration",
     desc: "Design, implementation, and management of secure, reliable, and cost-effective IT infrastructure for enterprise and government environments.",
   },
   {
-    id: "06",
+    id: "09",
     title: "Security & Surveillance Systems",
     desc: "Integrated IP-based security solutions including access control, video surveillance, and fire detection systems for proactive safety management.",
   },
   {
-    id: "07",
-    title: "Facility Management Services",
-    desc: "On-site and remote IT infrastructure management with structured planning, reporting, escalation, and compliance.",
-  },
-  {
-    id: "08",
-    title: "Intelligent Automation",
-    desc: "Automation solutions that improve productivity, reduce operational complexity, and enable organizations to adapt to changing business needs.",
-  },
-  {
-    id: "09",
-    title: "Low-Code Application Development",
-    desc: "Rapid application development platforms empowering citizen developers and accelerating digital transformation initiatives.",
-  },
-  {
     id: "10",
-    title: "Conversational AI",
-    desc: "AI-powered chatbots and voice assistants that deliver intelligent, context-aware customer interactions.",
+    title: "Facility Management Services",
+    desc: "Comprehensive IT facility management with structured planning, reporting, escalation, and compliance-driven service delivery.",
   },
   {
     id: "11",
+    title: "Intelligent Automation",
+    desc: "Automation solutions that reduce operational complexity, improve productivity, and help organizations adapt to evolving business needs.",
+  },
+  {
+    id: "12",
+    title: "Low-Code Application Development",
+    desc: "Rapid application development using low-code platforms to accelerate digital initiatives and empower citizen developers.",
+  },
+  {
+    id: "13",
+    title: "Conversational AI",
+    desc: "AI-powered chatbots and voice assistants delivering intelligent, context-aware customer interactions across platforms.",
+  },
+  {
+    id: "14",
     title: "Software Product Engineering",
-    desc: "End-to-end software product lifecycle management from concept design to deployment using agile and DevOps practices.",
+    desc: "End-to-end software product lifecycle management from concept and design to deployment using agile and DevOps practices.",
   },
 ];
 
