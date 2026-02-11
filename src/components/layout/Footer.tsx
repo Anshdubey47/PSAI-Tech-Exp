@@ -11,7 +11,7 @@ const footerLinks = {
   ],
   services: [
     { name: 'IT Hardware Supply', href: '/products' },
-    { name: 'All Services', href: '/manpower' },
+    { name: 'All Services', href: '/services' },
     { name: 'Government Projects', href: '/projects' },
   ],
   company: [
