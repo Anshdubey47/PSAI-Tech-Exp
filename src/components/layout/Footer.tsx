@@ -10,6 +10,7 @@ import {
   ArrowRight,
 } from 'lucide-react';
 
+import logo from '@/assets/logo.jpeg';
 const footerLinks = {
   services: [
     { name: 'Our Products', href: '/products' },
@@ -37,17 +38,23 @@ export default function Footer() {
 
           {/* LEFT SIDE - COMPANY INFO */}
           <div className="max-w-md mx-6">
-            <Link to="/" className="flex items-center space-x-2 group mb-6">
-              <div className="relative">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-xl">PS</span>
-                </div>
-                <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary to-accent blur-lg opacity-50" />
-              </div>
-              <span className="font-bold text-xl text-foreground">
-                PS Associates
-              </span>
-            </Link>
+            <Link to="/" className="flex items-center space-x-2 group">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="relative"
+            >
+              <img
+                src={logo}
+                alt="PS Associates Logo"
+                className="w-10 h-10 rounded-lg object-cover"
+              />
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary to-accent blur-lg opacity-50 group-hover:opacity-75 transition-opacity" />
+            </motion.div>
+            <div className="flex flex-col">
+              <span className="font-bold text-lg text-foreground">PS Associates</span>
+              <span className="text-xs text-muted-foreground hidden sm:block">IT Hardware & Manpower</span>
+            </div>
+          </Link>
 
             <p className="text-muted-foreground mb-6">
               PS Associates delivers timely, high-quality technology solutions

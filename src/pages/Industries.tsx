@@ -8,7 +8,7 @@ const industries = [
   {
     id: '01',
     title: 'Government & PSUs',
-    desc: 'Work in different fields and maintain employee service in the oil, banking, and power industries.',
+    desc: 'Work in different fields and maintain hardware services in cooperative banking & power industries.',
   },
   {
     id: '02',

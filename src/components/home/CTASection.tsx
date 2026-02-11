@@ -70,7 +70,7 @@ export default function CTASection() {
               </div>
             </motion.a>
             <motion.a
-              href="mailto:info@psassociates.in"
+              href="mailto:support@psaitech.com"
               whileHover={{ scale: 1.02 }}
               className="glow-card p-4 flex items-center gap-3"
             >
@@ -79,7 +79,7 @@ export default function CTASection() {
               </div>
               <div className="text-left">
                 <div className="text-sm text-muted-foreground">Email Us</div>
-                <div className="font-semibold text-foreground">info@psaissociates.in</div>
+                <div className="font-semibold text-foreground">support@psaitech.com</div>
               </div>
             </motion.a>
           </div>

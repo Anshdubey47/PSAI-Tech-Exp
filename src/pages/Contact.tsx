@@ -111,7 +111,7 @@ export default function Contact() {
                     {
                       icon: Mail,
                       label: 'Email (Sales)',
-                      value: 'sales@psaitech.com',
+                      value: 'bdm1@psaitech.com',
                     },
                     {
                       icon: Mail,
