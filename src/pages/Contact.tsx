@@ -118,6 +118,11 @@ export default function Contact() {
                       label: 'Email (HR)',
                       value: 'hr@psaitech.com',
                     },
+                    {
+                      icon: Mail,
+                      label: 'Email (Support)',
+                      value: 'support@psaitech.com',
+                    },
                   ].map((item) => (
                     <div
                       key={item.label}
