@@ -14,6 +14,7 @@ import certImage2 from '@/assets/images/certificates/image copy.png';
 import certImage3 from '@/assets/images/certificates/image copy 2.png';
 import certImage4 from '@/assets/images/certificates/image copy 3.png';
 
+import cert1 from '@/assets/images/certificates/cert1.png';
 import certificatenew from '@/assets/images/certificates/certificatenew.png';
 const timeline = [
   {
@@ -82,8 +83,12 @@ const certificates: Certificate[] = [
     src: certImage4,
   },
   {
-    name: 'Certificate 4',
+    name: 'Certificate 5',
     src: certificatenew,
+  },
+  {
+    name: 'Certificate 6',
+    src: cert1,
   },
 ];
 
