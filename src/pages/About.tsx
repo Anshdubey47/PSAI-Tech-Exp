@@ -3,7 +3,7 @@ import Layout from '@/components/layout/Layout';
 import { Shield, Target, Eye, Award } from 'lucide-react';
 import leaderImage1 from '@/assets/images/leaders/Image10.png';
 import leaderImage2 from '@/assets/images/leaders/image copy.png';
-import leaderImage3 from '@/assets/images/leaders/image copy 2.png';
+import leaderImage3 from '@/assets/images/leaders/Image12.png';
 import leaderImage4 from '@/assets/images/leaders/image copy 3.png';
 import leaderImage5 from '@/assets/images/leaders/image copy 4.png';
 import leaderImage6 from '@/assets/images/leaders/image copy 5.png';
