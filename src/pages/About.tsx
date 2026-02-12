@@ -95,7 +95,7 @@ const certificates: Certificate[] = [
 const leaders = [
   {
     name: 'Mahesh dubey',
-    role: 'CEO PS associates',
+    role: 'CEO PS Associates',
     src: leaderImage1,
   },
   {
@@ -119,18 +119,18 @@ const leaders = [
     src: leaderImage5,
   },
   {
-    name: 'Rukmani',
-    role: 'Gem Executive',
-    src: leaderImage6,
-  },
-  {
     name: 'Niharika Uzzarke',
-    role: 'HR Executive',
+    role: 'Human Resources ',
     src: leaderImage7,
   },
   {
+    name: 'Rukmani',
+    role: 'GeM Team',
+    src: leaderImage6,
+  },
+  {
     name: 'Sachin',
-    role: 'Accounts Executive',
+    role: 'Accounts',
     src: leaderImage8,
   },
 ];
