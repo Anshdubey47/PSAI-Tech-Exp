@@ -1,88 +1,127 @@
 import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 
+
 /* Banner Image */
 import servicesBg from "@/assets/images/industriesbg.png";
+
+/* Service Images - Import them here */
+import service04Img from "@/assets/images/servicesimg/IMG_8049.png";
+import service05Img from "@/assets/images/servicesimg/IMG_8051.png";
+import service06Img from "@/assets/images/servicesimg/IMG_8052.png";
+import service07Img from "@/assets/images/servicesimg/IMG_8053.png";
+import service08Img from "@/assets/images/servicesimg/IMG_8054.png";
+import service09Img from "@/assets/images/servicesimg/IMG_8055.png";
+import service10Img from "@/assets/images/servicesimg/IMG_8056.png";
+import service11Img from "@/assets/images/servicesimg/IMG_8057.png";
+import service12Img from "@/assets/images/servicesimg/IMG_8058.png";
+import service13Img from "@/assets/images/servicesimg/IMG_8059.png";
+import service14Img from "@/assets/images/servicesimg/fMS_psa.png";
+import service16Img from "@/assets/images/servicesimg/Intelligent.png";
+import service17Img from "@/assets/images/servicesimg/AMC.png";
+import service18Img from "@/assets/images/servicesimg/Networking.png";
+import service19Img from "@/assets/images/servicesimg/IMG_8060.png";
+import service20Img from "@/assets/images/servicesimg/IMG_8062.png";
 
 /* Services Data (Top 3 + existing, continuous numbering) */
 const services = [
   {
     id: "01",
+    image:service07Img,
     title: "Smart Training Solutions",
     desc: "PS Associates delivers smart training solutions through digital learning platforms, structured programs, and technology-enabled education initiatives that improve employability and skill development.",
   },
   {
     id: "02",
+    image:service06Img,
     title: "System Integration for Digital India",
     desc: "End-to-end system integration services aligned with Digital India initiatives, combining software platforms, infrastructure, and skilled resources to deliver scalable transformation solutions.",
   },
   {
     id: "03",
+    image:service08Img,
     title: "Services Consultancy",
-    desc: "Professional services consultancy services offering recruitment, deployment, monitoring, and retention of skilled personnel with complete confidentiality and ethical compliance.",
+    desc: "Professional services consultancy offering recruitment, deployment, monitoring, and retention of skilled personnel with complete confidentiality and ethical compliance.",
   },
   {
     id: "04",
+    image: service04Img,
     title: "Application Development & Maintenance",
-    desc: "End-to-end application design, development, testing, integration, and maintenance services that enhance system life, reduce downtime, and improve operational efficiency.",
+    desc: "Our services help IT systems run more efficiently by reducing costs, improving quality, and maximizing IT solutions. Includes analysis, design, implementation, testing, and integration with 25+ years of experience.",
   },
   {
     id: "05",
+    image: service05Img,
     title: "Cloud & Infrastructure Services",
-    desc: "Migration, optimization, and management of cloud-enabled and software-defined infrastructure to improve scalability, performance, and business agility.",
+    desc: "Transform your infrastructure from capital-intensive, hardware-focused to intelligent, software-defined solutions. We help with cloud adoption, migration, and implementation for any opportunity.",
   },
   {
     id: "06",
+    image:service09Img,
     title: "CX Transformation",
-    desc: "Customer experience transformation through optimized sales, service workflows, and intelligent engagement across the customer journey.",
+    desc: "Streamline sales and customer service to enhance user connections with your brand. Creating operational ecosystems that enable quick response and intelligently designed customer experiences at scale.",
   },
   {
     id: "07",
+    image:service10Img,
     title: "Data Analytics",
-    desc: "Advanced analytics, visualization, AI, and ML solutions that enable data-driven decision-making and unlock actionable business insights.",
+    desc: "Leverage Data Visualization, Business Analytics, AI, Machine Learning, and Deep Learning to unlock value. We take an integrated approach to business intelligence projects for actionable insights.",
   },
   {
     id: "08",
+    image:service11Img,
     title: "Enterprise IT Security & Integration",
-    desc: "Design, implementation, and management of secure, reliable, and cost-effective IT infrastructure for enterprise and government environments.",
+    desc: "PSAITECH plans, designs and implements organizational IT strategies with cost-effective, reliable, cutting-edge infrastructure. Includes Data Center, Networking, Security & Surveillance, and Facility Management.",
   },
   {
     id: "09",
+    image:service12Img,
     title: "Security & Surveillance Systems",
-    desc: "Integrated IP-based security solutions including access control, video surveillance, and fire detection systems for proactive safety management.",
+    desc: "IP-based security systems including Access Control, Video Surveillance, and Fire Detection & Alarm. Integrated solutions that are economical, proactive, flexible, and provide greater control.",
   },
   {
     id: "10",
+    image:service14Img,
     title: "Facility Management Services",
-    desc: "Comprehensive IT facility management with structured planning, reporting, escalation, and compliance-driven service delivery.",
+    desc: "Complete planning, reporting, escalations and management of IT Infrastructure. Includes AMC services, Server & Network Management, Email Configuration, SLA Management, IT Security, and Asset Management.",
   },
   {
     id: "11",
+    image:service16Img,
     title: "Intelligent Automation",
-    desc: "Automation solutions that reduce operational complexity, improve productivity, and help organizations adapt to evolving business needs.",
+    desc: "With 23+ years of experience, PSAITECH delivers intelligent automation through Business Process Management, Robotic Process Automation, Low-Code Development, and Conversational AI solutions.",
   },
   {
     id: "12",
+    image:service13Img,
     title: "Low-Code Application Development",
-    desc: "Rapid application development using low-code platforms to accelerate digital initiatives and empower citizen developers.",
+    desc: "Accelerate digital transformation by empowering citizen developers. Includes Legacy Application Modernization, Multi-experience Development, and Rapid Application Development reducing launch times by 60%.",
   },
   {
     id: "13",
+    image:service19Img,
     title: "Conversational AI",
-    desc: "AI-powered chatbots and voice assistants delivering intelligent, context-aware customer interactions across platforms.",
+    desc: "Highly intelligent chatbots for written and spoken communication using context and non-verbal indicators. Features Smart Assistants, NLP for actionable insights, and 24/7 multilingual support.",
   },
   {
     id: "14",
+    image:service20Img,
     title: "Software Product Engineering",
-    desc: "End-to-end software product lifecycle management from concept and design to deployment using agile and DevOps practices.",
+    desc: "Design, development, testing, deployment, and maintenance of software products. Using agile methodologies, design thinking, and DevOps to create digital solutions from concept to practical results.",
   },
   {
-  id: "15",
-  title: "Networking & AMC",
-  desc: "PS Associates offers comprehensive networking solutions and reliable Annual Maintenance Contracts (AMC) designed to maintain system efficiency, enhance network security, and ensure continuous business operations.",
-},
+    id: "15",
+    image:service17Img,
+    title: "Annual Maintenance Contract (AMC)",
+    desc: "Proactive IT infrastructure maintenance including health checks, troubleshooting, hardware servicing, and system optimization. Using preventive monitoring and support to ensure reliable operations and extended asset life.",
+  },
+  {
+    id: "16",
+    image:service18Img,
+    title: "Networking Solutions",
+    desc: "We deliver end-to-end networking solutions including LAN, WAN, cabling, routing, firewall setup, and secure wireless deployment, ensuring reliable performance and secure connectivity.",
+  },
 ];
-
 /* Animations */
 const container = {
   hidden: {},
@@ -169,6 +208,17 @@ export default function Services() {
                 <div className="text-4xl font-bold text-primary mb-3 relative z-10">
                   {item.id}
                 </div>
+
+                {/* Image - displays below ID if available */}
+                {item.image && (
+                  <div className="mb-4 relative z-10">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-70 object-cover rounded-lg"
+                    />
+                  </div>
+                )}
 
                 <h3 className="text-lg font-semibold mb-3 relative z-10">
                   {item.title}

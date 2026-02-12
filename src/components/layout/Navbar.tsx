@@ -7,7 +7,7 @@ import logo from '@/assets/logo.jpeg';
 const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  { name: 'Services', href: '/manpower' },
+  { name: 'Services', href: '/services' },
   { name: 'Products', href: '/products' },
   { name: 'Industries', href: '/industries' },
   { name: 'Partners', href: '/partners' },
@@ -58,7 +58,7 @@ export default function Navbar() {
             </motion.div>
             <div className="flex flex-col">
               <span className="font-bold text-lg text-foreground">PS Associates</span>
-              <span className="text-xs text-muted-foreground hidden sm:block">IT Hardware & Manpower</span>
+              <span className="text-xs text-muted-foreground hidden sm:block">IT Hardware & Services</span>
             </div>
           </Link>
 

@@ -488,6 +488,53 @@ const AnimatedIcon = ({ type }) => {
         />
       </svg>
     ),
+    
+    video: (
+      <svg viewBox="0 0 100 100" className="w-full h-full">
+        <motion.rect
+          x="20" y="30" width="50" height="40" rx="3"
+          fill="none" stroke="currentColor" strokeWidth="2"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
+        />
+        <motion.path
+          d="M70 40 L85 30 L85 70 L70 60 Z"
+          fill="currentColor"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.8, repeat: Infinity, repeatDelay: 1.5 }}
+        />
+        <motion.circle
+          cx="35" cy="45" r="5"
+          fill="currentColor"
+          initial={{ scale: 0 }}
+          animate={{ scale: [0, 1.2, 1] }}
+          transition={{ delay: 0.8, duration: 0.5, repeat: Infinity, repeatDelay: 2 }}
+        />
+        <motion.path
+          d="M50 55 Q60 60 65 55"
+          fill="none" stroke="currentColor" strokeWidth="2"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ delay: 1.2, duration: 0.8, repeat: Infinity, repeatDelay: 1.5 }}
+        />
+        <motion.g>
+          {[0, 1, 2].map((i) => (
+            <motion.circle
+              key={i}
+              cx={25 + i * 6}
+              cy={22}
+              r="1.5"
+              fill="currentColor"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: [0, 1, 0] }}
+              transition={{ delay: i * 0.3 + 1.5, duration: 1, repeat: Infinity, repeatDelay: 1.5 }}
+            />
+          ))}
+        </motion.g>
+      </svg>
+    ),
   };
 
   return icons[type] || icons.vending;
@@ -626,6 +673,21 @@ const products = [
     icon: 'eye',
     description: 'Our mobile surveillance application offers comprehensive security solutions for homes, ensuring continuous monitoring and detection of intruders in your absence.',
     long: 'With motion detection and facial recognition capabilities, any suspicious activity triggers immediate alerts via email, call, or SMS. Our app, compatible with Android and Apple devices, features live video streaming and an attendance management system for enhanced security. Seamlessly integrate various devices like IP cameras and alarms for a robust security setup.',
+  },
+  {
+    id: 16,
+    title: 'Video Conferencing Solutions',
+    icon: 'video',
+    description: 'Complete Unified Communication & Collaboration Platform',
+    points: [
+      'Enterprise-grade video conferencing systems for boardrooms, training rooms, and hybrid work environments',
+      'HD video, crystal-clear audio, screen sharing, recording, and live streaming capabilities',
+      'Integration with platforms like Zoom, Microsoft Teams, Google Meet & Webex',
+      'Smart meeting room setup including PTZ cameras, interactive displays, digital whiteboards, and noise-cancellation audio systems',
+      'Secure, encrypted communication with role-based access and compliance-ready architecture',
+      'Scalable cloud and on-premise deployment options tailored to your business needs',
+    ],
+    long: 'Our video conferencing solutions enhance collaboration, improve productivity, and enable seamless communication across distributed teams, clients, and global offices.',
   },
 ];
 
