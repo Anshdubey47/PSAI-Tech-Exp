@@ -121,11 +121,6 @@ const services = [
     title: "Networking Solutions",
     desc: "We deliver end-to-end networking solutions including LAN, WAN, cabling, routing, firewall setup, and secure wireless deployment, ensuring reliable performance and secure connectivity.",
   },
-  {
-  id: "15",
-  title: "Networking & AMC",
-  desc: "PS Associates offers comprehensive networking solutions and reliable Annual Maintenance Contracts (AMC) designed to maintain system efficiency, enhance network security, and ensure continuous business operations.",
-},
 ];
 /* Animations */
 const container = {
