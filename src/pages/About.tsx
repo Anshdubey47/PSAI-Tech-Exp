@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Layout from '@/components/layout/Layout';
 import { Shield, Target, Eye, Award } from 'lucide-react';
-import leaderImage1 from '@/assets/images/leaders/image.png';
+import leaderImage1 from '@/assets/images/leaders/image10.jpeg';
 import leaderImage2 from '@/assets/images/leaders/image copy.png';
 import leaderImage3 from '@/assets/images/leaders/image copy 2.png';
 import leaderImage4 from '@/assets/images/leaders/image copy 3.png';
