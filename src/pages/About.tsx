@@ -337,7 +337,7 @@ export default function About() {
                   className="glow-card p-6 text-center bg-gradient-to-br from-primary/5 via-background to-accent/10"
                 >
                   <div className="w-32 h-40 mx-auto mb-4 rounded-2xl overflow-hidden bg-background/60">
-                    <img src={leader.src} alt={leader.name} className="w-full h-full object-cover" />
+                    <img src={leader.src} alt={leader.name} className="w-full h-full object-cover object-top" />
                   </div>
                   <h3 className="font-semibold">{leader.name}</h3>
                   <div className="text-primary text-sm mt-1">{leader.role}</div>
