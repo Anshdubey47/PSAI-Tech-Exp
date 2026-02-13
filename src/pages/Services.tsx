@@ -225,14 +225,16 @@ export default function Services() {
 
                 {/* Image - displays below ID if available */}
                 {item.image && (
-                  <div className="mb-4 relative z-10">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-70 object-cover rounded-lg"
-                    />
-                  </div>
-                )}
+                  <div className="mb-4 relative z-10 bg-secondary/40 rounded-xl p-4">
+                   <img
+                     src={item.image}
+                     alt={item.title}
+                     className="w-full h-56 object-contain rounded-lg 
+                     saturate-90 brightness-95 contrast-95"
+                />
+        </div>
+     )}
+
 
                 <h3 className="text-lg font-semibold mb-3 relative z-10">
                   {item.title}
