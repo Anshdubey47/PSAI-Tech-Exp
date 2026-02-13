@@ -121,6 +121,18 @@ const services = [
     title: "Networking Solutions",
     desc: "We deliver end-to-end networking solutions including LAN, WAN, cabling, routing, firewall setup, and secure wireless deployment, ensuring reliable performance and secure connectivity.",
   },
+   {
+    id: "17",
+    image:service18Img,
+    title: "Cybersecurity Services",
+    desc: "Securing your digital infrastructure with AI-first defense strategies. Offers Advanced Threat Detection, Identity & Access Security, Extended Detection & Response (XDR), Zero Trust Architecture, Deepfake Protection, and Quantum-Safe Security Solutions to safeguard your business against evolving cyber risks.",
+  },
+   {
+    id: "18",
+    image:service18Img,
+    title: "AI-Enabled IT Services",
+    desc: "Transforming your enterprise with intelligent automation and adaptive AI ecosystems includeing AI-driven Automation, Hybrid AI Cloud Platforms, and Industry-Specific AI Solutions designed to optimize operations, enhance decision-making, and accelerate digital innovation. ",
+  },
 ];
 /* Animations */
 const container = {
