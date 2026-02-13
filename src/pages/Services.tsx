@@ -22,6 +22,7 @@ import service17Img from "@/assets/images/servicesimg/AMC.png";
 import service18Img from "@/assets/images/servicesimg/Networking.png";
 import service19Img from "@/assets/images/servicesimg/IMG_8060.png";
 import service20Img from "@/assets/images/servicesimg/IMG_8062.png";
+import service21Img from "@/assets/images/servicesimg/AI enabled Services.png";
 
 /* Services Data (Top 3 + existing, continuous numbering) */
 const services = [
@@ -129,7 +130,7 @@ const services = [
   },
    {
     id: "18",
-    image:service18Img,
+    image:service21Img,
     title: "AI-Enabled IT Services",
     desc: "Transforming your enterprise with intelligent automation and adaptive AI ecosystems includeing AI-driven Automation, Hybrid AI Cloud Platforms, and Industry-Specific AI Solutions designed to optimize operations, enhance decision-making, and accelerate digital innovation. ",
   },
