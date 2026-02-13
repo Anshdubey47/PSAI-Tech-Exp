@@ -22,7 +22,7 @@ import service17Img from "@/assets/images/servicesimg/AMC.png";
 import service18Img from "@/assets/images/servicesimg/Networking.png";
 import service19Img from "@/assets/images/servicesimg/IMG_8060.png";
 import service20Img from "@/assets/images/servicesimg/IMG_8062.png";
-import service21Img from "@/assets/images/servicesimg/AI enabled Services.png";
+import service21Img from "@/assets/images/servicesimg/AI Services.png";
 import service22Img from "@/assets/images/servicesimg/Cybersecurity.png";
 
 /* Services Data (Top 3 + existing, continuous numbering) */
