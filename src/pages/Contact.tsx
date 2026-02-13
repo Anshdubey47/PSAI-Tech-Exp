@@ -18,21 +18,15 @@ export default function Contact() {
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
 
-  const response = await fetch("https://formspree.io/f/xlgwjpoy", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-    "Accept": "application/json"
-  },
-  body: JSON.stringify({
-    name: form.name,
-    email: form.email,
-    phone: form.phone,
-    organization: form.organization,
-    message: form.message,
-  }),
-});
-
+  try {
+    const response = await fetch("https://formspree.io/f/xlgwjpoy", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
 
     if (response.ok) {
       toast({
@@ -53,6 +47,7 @@ const handleSubmit = async (e: React.FormEvent) => {
         description: "Something went wrong. Please try again.",
       });
     }
+
   } catch (error) {
     toast({
       title: "Error",
@@ -60,6 +55,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     });
   }
 };
+
 
 
   return (
