@@ -23,6 +23,7 @@ import service18Img from "@/assets/images/servicesimg/Networking.png";
 import service19Img from "@/assets/images/servicesimg/IMG_8060.png";
 import service20Img from "@/assets/images/servicesimg/IMG_8062.png";
 import service21Img from "@/assets/images/servicesimg/AI enabled Services.png";
+import service22Img from "@/assets/images/servicesimg/Cybersecurity.png";
 
 /* Services Data (Top 3 + existing, continuous numbering) */
 const services = [
@@ -124,7 +125,7 @@ const services = [
   },
    {
     id: "17",
-    image:service18Img,
+    image:service22Img,
     title: "Cybersecurity Services",
     desc: "Securing your digital infrastructure with AI-first defense strategies. Offers Advanced Threat Detection, Identity & Access Security, Extended Detection & Response (XDR), Zero Trust Architecture, Deepfake Protection, and Quantum-Safe Security Solutions to safeguard your business against evolving cyber risks.",
   },
