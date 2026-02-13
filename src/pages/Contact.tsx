@@ -15,22 +15,45 @@ export default function Contact() {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
+  try {
+    const response = await fetch("https://formspree.io/f/xlgwjpoy", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
+
+    if (response.ok) {
+      toast({
+        title: "Message Sent!",
+        description: "We will get back to you within 24 hours.",
+      });
+
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        organization: "",
+        message: "",
+      });
+    } else {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+      });
+    }
+  } catch (error) {
     toast({
-      title: 'Message Sent!',
-      description: 'We will get back to you within 24 hours.',
+      title: "Error",
+      description: "Network error. Please try again.",
     });
+  }
+};
 
-    setForm({
-      name: '',
-      email: '',
-      phone: '',
-      organization: '',
-      message: '',
-    });
-  };
 
   return (
     <Layout>
