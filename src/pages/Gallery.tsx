@@ -153,8 +153,9 @@ export default function Gallery() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition" />
 
                 {/* Title */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition">
-                  <h3 className="font-semibold text-sm">
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition flex justify-center text-center">
+
+                  <h3 className="font-semibold text-sm w-full">
                     {item.title}
                   </h3>
                 </div>
