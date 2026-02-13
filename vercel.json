@@ -1,4 +1,7 @@
 {
   "installCommand": "npm install --force",
-  "buildCommand": "npx vite build"
+  "buildCommand": "npx vite build",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ]
 }
