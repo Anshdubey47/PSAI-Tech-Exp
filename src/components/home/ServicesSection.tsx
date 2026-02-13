@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Monitor, Laptop, Printer, Users, Wrench, HeadphonesIcon, ArrowRight } from 'lucide-react';
+import { Monitor, Laptop, Printer, Users, Wrench, HeadphonesIcon, ArrowRight, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const services = [
@@ -47,6 +47,13 @@ const services = [
     href: '/services',
     color: 'from-pink-500 to-rose-500',
   },
+  {
+  icon: ShieldCheck,
+  title: "Cyber Security",
+  description: "Enterprise-grade protection including threat detection, firewall setup, and endpoint security.",
+  href: "/services",
+  color: "from-red-500 to-orange-500",
+},
 ];
 
 function ServiceCard({ service, index }: { service: typeof services[0]; index: number }) {
