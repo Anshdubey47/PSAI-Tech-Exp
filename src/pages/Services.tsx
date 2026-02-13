@@ -225,7 +225,7 @@ export default function Services() {
 
                 {/* Image - displays below ID if available */}
                 {item.image && (
-                  <div className="mb-4 relative z-10 bg-secondary/40 rounded-xl p-4">
+                  <div className="w-full h-56 object-contain rounded-xl p-4 bg-background brightness-110 contrast-110 saturate-125">
                    <img
                      src={item.image}
                      alt={item.title}
