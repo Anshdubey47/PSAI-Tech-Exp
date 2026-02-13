@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Monitor, Laptop, Printer, Users, Wrench, HeadphonesIcon, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Monitor, Laptop, Printer, Users, Wrench, HeadphonesIcon, ArrowRight, ShieldCheck, Cpu } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const services = [
@@ -54,6 +54,14 @@ const services = [
   href: "/services",
   color: "from-red-500 to-orange-500",
 },
+  { 
+  icon: Cpu, 
+  title: "AI Enabled IT Services", 
+  description: "AI-driven IT automation, hybrid AI cloud platforms, intelligent infrastructure monitoring, and industry-specific AI solutions for optimized operations.", 
+  href: "/services", 
+  color: "from-blue-500 to-cyan-500", 
+},
+
 ];
 
 function ServiceCard({ service, index }: { service: typeof services[0]; index: number }) {
