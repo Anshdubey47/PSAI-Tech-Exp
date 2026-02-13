@@ -18,14 +18,21 @@ export default function Contact() {
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
 
-  try {
-    const response = await fetch("https://formspree.io/f/xlgwjpoy", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(form),
-    });
+  const response = await fetch("https://formspree.io/f/xlgwjpoy", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+  },
+  body: JSON.stringify({
+    name: form.name,
+    email: form.email,
+    phone: form.phone,
+    organization: form.organization,
+    message: form.message,
+  }),
+});
+
 
     if (response.ok) {
       toast({
