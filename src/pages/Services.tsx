@@ -9,7 +9,7 @@ import servicesBg from "@/assets/images/industriesbg.png";
 import service04Img from "@/assets/images/servicesimg/IMG_8049.png";
 import service05Img from "@/assets/images/servicesimg/IMG_8051.png";
 import service06Img from "@/assets/images/servicesimg/IMG_8052.png";
-import service07Img from "@/assets/images/servicesimg/IMG_8053.png";
+import service07Img from "@/assets/images/servicesimg/Smartimage.png";
 import service08Img from "@/assets/images/servicesimg/IMG_8054.png";
 import service09Img from "@/assets/images/servicesimg/IMG_8055.png";
 import service10Img from "@/assets/images/servicesimg/IMG_8056.png";
