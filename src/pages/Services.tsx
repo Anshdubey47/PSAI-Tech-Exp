@@ -18,12 +18,12 @@ import service12Img from "@/assets/images/servicesimg/Survelliance.png";
 import service13Img from "@/assets/images/servicesimg/LowCodeApp.png";
 import service14Img from "@/assets/images/servicesimg/FacilityManagementServices.png";
 import service16Img from "@/assets/images/servicesimg/IntelligentAutomation.png";
-import service17Img from "@/assets/images/servicesimg/AMC.png";
-import service18Img from "@/assets/images/servicesimg/Netorking solutions.png";
+import service17Img from "@/assets/images/servicesimg/AMCtransparent.png";
+import service18Img from "@/assets/images/servicesimg/NetworkingSolutionsTransparent.png";
 import service19Img from "@/assets/images/servicesimg/Conversational AI.png";
 import service20Img from "@/assets/images/servicesimg/SoftwareProduct.png";
 import service21Img from "@/assets/images/servicesimg/AI Enable IT services.png";
-import service22Img from "@/assets/images/servicesimg/CyberSecurity (2).png";
+import service22Img from "@/assets/images/servicesimg/Cybersecuritytransparent.png";
 
 /* Services Data (Top 3 + existing, continuous numbering) */
 const services = [
