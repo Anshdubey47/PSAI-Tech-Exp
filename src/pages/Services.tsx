@@ -6,24 +6,24 @@ import Layout from "@/components/layout/Layout";
 import servicesBg from "@/assets/images/industriesbg.png";
 
 /* Service Images - Import them here */
-import service04Img from "@/assets/images/servicesimg/IMG_8049.png";
-import service05Img from "@/assets/images/servicesimg/IMG_8051.png";
-import service06Img from "@/assets/images/servicesimg/IMG_8052.png";
-import service07Img from "@/assets/images/servicesimg/IMG_8053.png";
-import service08Img from "@/assets/images/servicesimg/IMG_8054.png";
-import service09Img from "@/assets/images/servicesimg/IMG_8055.png";
-import service10Img from "@/assets/images/servicesimg/IMG_8056.png";
-import service11Img from "@/assets/images/servicesimg/IMG_8057.png";
-import service12Img from "@/assets/images/servicesimg/IMG_8058.png";
-import service13Img from "@/assets/images/servicesimg/IMG_8059.png";
-import service14Img from "@/assets/images/servicesimg/fMS_psa.png";
-import service16Img from "@/assets/images/servicesimg/Intelligent.png";
+import service04Img from "@/assets/images/servicesimg/AppDev.png";
+import service05Img from "@/assets/images/servicesimg/CloudInfra.png";
+import service06Img from "@/assets/images/servicesimg/SysIntegration.png";
+import service07Img from "@/assets/images/servicesimg/Smartraining.png";
+import service08Img from "@/assets/images/servicesimg/Servicesconsultancy.png";
+import service09Img from "@/assets/images/servicesimg/CXTransformation.png";
+import service10Img from "@/assets/images/servicesimg/DataAnalytics.png";
+import service11Img from "@/assets/images/servicesimg/EnterpriseIT.png";
+import service12Img from "@/assets/images/servicesimg/Survelliance.png";
+import service13Img from "@/assets/images/servicesimg/LowCodeApp.png";
+import service14Img from "@/assets/images/servicesimg/FacilityManagementServices.png";
+import service16Img from "@/assets/images/servicesimg/IntelligentAutomation.png";
 import service17Img from "@/assets/images/servicesimg/AMC.png";
-import service18Img from "@/assets/images/servicesimg/Networking.png";
-import service19Img from "@/assets/images/servicesimg/IMG_8060.png";
-import service20Img from "@/assets/images/servicesimg/IMG_8062.png";
-import service21Img from "@/assets/images/servicesimg/AI Services.png";
-import service22Img from "@/assets/images/servicesimg/Cybersecurity.png";
+import service18Img from "@/assets/images/servicesimg/Netorking solutions.png";
+import service19Img from "@/assets/images/servicesimg/Conversational AI.png";
+import service20Img from "@/assets/images/servicesimg/SoftwareProduct.png";
+import service21Img from "@/assets/images/servicesimg/AI Enable IT services.png";
+import service22Img from "@/assets/images/servicesimg/CyberSecurity (2).png";
 
 /* Services Data (Top 3 + existing, continuous numbering) */
 const services = [
