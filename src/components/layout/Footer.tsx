@@ -65,17 +65,17 @@ export default function Footer() {
             <div className="space-y-3">
               <a href="mailto:bdm1@psaitech.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group">
                 <Mail className="w-4 h-4" />
-                <span className="text-sm">bdm1@psaitech.com</span>
+                <span className="text-sm">support@psaitech.com</span>
               </a>
 
               <a href="mailto:hr@psaitech.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group">
                 <Mail className="w-4 h-4" />
-                <span className="text-sm">hr@psaitech.com</span>
+                <span className="text-sm">bdm1@psaitech.com</span>
               </a>
 
               <a href="mailto:support@psaitech.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group">
                 <Mail className="w-4 h-4" />
-                <span className="text-sm">support@psaitech.com</span>
+                <span className="text-sm">hr@psaitech.com</span>
               </a>
 
               <a href="tel:+917554222624" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group">
