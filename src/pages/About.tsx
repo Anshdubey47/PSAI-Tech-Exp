@@ -120,17 +120,17 @@ const leaders = [
   },
   {
     name: 'Rukmani',
-    role: 'Gem Executive',
+    role: 'Gem',
     src: leaderImage6,
   },
   {
-    name: 'Niharika Uzzarke',
-    role: 'HR Executive',
+    name: 'Niharika',
+    role: 'HR',
     src: leaderImage7,
   },
   {
     name: 'Sachin',
-    role: 'Accounts Executive',
+    role: 'Accounts',
     src: leaderImage8,
   },
 ];
