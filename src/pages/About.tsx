@@ -119,12 +119,12 @@ const leaders = [
     src: leaderImage5,
   },
   {
-    name: 'Rukmani',
+    name: 'Rukmani Singh',
     role: 'Gem',
     src: leaderImage6,
   },
   {
-    name: 'Niharika',
+    name: 'Niharika Uchchasare',
     role: 'HR',
     src: leaderImage7,
   },
