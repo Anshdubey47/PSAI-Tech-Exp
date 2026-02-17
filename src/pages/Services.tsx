@@ -23,7 +23,7 @@ import service18Img from "@/assets/images/servicesimg/NetworkingSolutionsTranspa
 import service19Img from "@/assets/images/servicesimg/Conversational AI.png";
 import service20Img from "@/assets/images/servicesimg/SoftwareProduct.png";
 import service21Img from "@/assets/images/servicesimg/AI Enable IT services.png";
-import service22Img from "@/assets/images/servicesimg/Cybersecuritytransparent.png";
+import service22Img from "@/assets/images/servicesimg/CybersecurityTP.png";
 
 /* Services Data (Top 3 + existing, continuous numbering) */
 const services = [
