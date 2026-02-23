@@ -340,9 +340,9 @@ export default function About() {
   <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
     
     {[ 
-      { city: "Raipur", img: raipurImg, text: "Head office managing operations and central coordination." },
+      { city: "Bhopal", img: bhopalImg, text: "Head office managing operations and central coordination." },
       { city: "Mumbai", img: mumbaiImg, text: "Strategic office for enterprise and media engagements." },
-      { city: "Bhopal", img: bhopalImg, text: "Regional hub for banking and government projects." },
+      { city: "Raipur", img: raipurImg, text: "Regional hub for banking and government projects." },
       { city: "Bangalore", img: bangaloreImg, text: "Technology partnerships and talent engagement hub." }
     ].map((office, index) => (
       <motion.div
