@@ -50,9 +50,9 @@ export default function Navbar() {
               <img
                 src={logo}
                 alt="PS Associates Logo"
-               className="w-10 h-10 object-contain"
+              className="w-10 h-10 rounded-lg object-cover"
               />
-            
+            <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary to-accent blur-lg opacity-50 group-hover:opacity-75 transition-opacity" />
             </motion.div>
             <div className="flex flex-col">
               <span className="font-bold text-lg text-white">PS Associates</span>
