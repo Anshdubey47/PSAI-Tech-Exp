@@ -358,7 +358,7 @@ export default function About() {
           <img
             src={office.img}
             alt={office.city}
-            className="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-110"
+            className="className="w-full aspect-[4/3] object-cover object-center transition-transform duration-500 group-hover:scale-110""
           />
         </div>
         <h3 className="text-lg font-semibold mb-2">{office.city}</h3>
