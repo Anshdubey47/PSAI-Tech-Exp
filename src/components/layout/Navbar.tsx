@@ -33,14 +33,12 @@ export default function Navbar() {
   }, [location]);
 
   return (
-    <nav
-      className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isScrolled 
-          ? 'bg-background/90 backdrop-blur-lg border-b border-border/50 shadow-lg shadow-primary/5' 
-          : 'bg-transparent'
-      )}
-    >
+   <nav
+  className={cn(
+    'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+    'bg-[#0f2f7a] border-b border-white/10 shadow-lg'
+  )}
+>
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -57,8 +55,8 @@ export default function Navbar() {
               <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary to-accent blur-lg opacity-50 group-hover:opacity-75 transition-opacity" />
             </motion.div>
             <div className="flex flex-col">
-              <span className="font-bold text-lg text-foreground">PS Associates</span>
-              <span className="text-xs text-muted-foreground hidden sm:block">IT Hardware & Services</span>
+              <span className="font-bold text-lg text-white">PS Associates</span>
+              <span className="text-xs text-white/70 hidden sm:block">IT Hardware & Services</span>
             </div>
           </Link>
 
@@ -71,15 +69,15 @@ export default function Navbar() {
                 className={cn(
                   'relative px-4 py-2 text-sm font-medium transition-colors rounded-lg',
                   location.pathname === link.href
-                    ? 'text-primary'
-                    : 'text-muted-foreground hover:text-foreground'
+                     ? 'text-white font-semibold'
+                     : 'text-white/80 hover:text-white'
                 )}
               >
                 {link.name}
                 {location.pathname === link.href && (
                   <motion.div
                     layoutId="navbar-indicator"
-                    className="absolute inset-0 bg-primary/10 rounded-lg -z-10"
+                    className="absolute inset-0 bg-white/10 rounded-lg -z-10"
                     transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                   />
                 )}
@@ -103,7 +101,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-foreground hover:text-primary transition-colors"
+            className="lg:hidden p-2 text-foreground hover:text-orange-300 transition-colors"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -118,7 +116,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-background/95 backdrop-blur-lg border-b border-border"
+            className="lg:hidden bg-[#0f2f7a] border-b border-white/10"
           >
             <div className="container-custom py-4 space-y-2">
               {navLinks.map((link, index) => (
@@ -133,8 +131,8 @@ export default function Navbar() {
                     className={cn(
                       'block px-4 py-3 rounded-lg text-sm font-medium transition-colors',
                       location.pathname === link.href
-                        ? 'bg-primary/10 text-primary'
-                        : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
+                           ? 'bg-white/10 text-white font-semibold'
+                           : 'text-white/80 hover:text-white hover:bg-white/10'
                     )}
                   >
                     {link.name}
