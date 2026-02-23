@@ -1,6 +1,10 @@
 import { motion } from 'framer-motion';
 import Layout from '@/components/layout/Layout';
 import { Shield, Target, Eye, Award } from 'lucide-react';
+import raipurImg from "@/assets/images/certificates/raipur.png";
+import mumbaiImg from "@/assets/images/certificates/mumbai.png";
+import bhopalImg from "@/assets/images/certificates/bhopal.png";
+import bangaloreImg from "@/assets/images/certificates/bangalore.png";
 import leaderImage1 from '@/assets/images/leaders/Image10.png';
 import leaderImage2 from '@/assets/images/leaders/image copy.png';
 import leaderImage3 from '@/assets/images/leaders/image12.png';
@@ -317,7 +321,53 @@ export default function About() {
               ))}
             </div>
           </motion.div>
+<motion.div
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, margin: "-100px" }}
+  className="mb-16"
+>
+  <div className="max-w-3xl mx-auto text-center mb-10">
+    <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      Our <span className="gradient-text">Offices</span>
+    </h2>
+    <p className="text-muted-foreground">
+      Strategically located offices across India enabling seamless delivery,
+      collaboration, and enterprise support nationwide.
+    </p>
+  </div>
 
+  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    
+    {[ 
+      { city: "Raipur", img: raipurImg, text: "Head office managing operations and central coordination." },
+      { city: "Mumbai", img: mumbaiImg, text: "Strategic office for enterprise and media engagements." },
+      { city: "Bhopal", img: bhopalImg, text: "Regional hub for banking and government projects." },
+      { city: "Bangalore", img: bangaloreImg, text: "Technology partnerships and talent engagement hub." }
+    ].map((office, index) => (
+      <motion.div
+        key={office.city}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: index * 0.1 }}
+        whileHover={{ y: -6 }}
+        className="glow-card p-5 text-center group bg-gradient-to-br from-primary/5 via-background to-accent/10"
+      >
+        <div className="overflow-hidden rounded-xl mb-4">
+          <img
+            src={office.img}
+            alt={office.city}
+            className="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+        </div>
+        <h3 className="text-lg font-semibold mb-2">{office.city}</h3>
+        <p className="text-sm text-muted-foreground">{office.text}</p>
+      </motion.div>
+    ))}
+
+  </div>
+</motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
