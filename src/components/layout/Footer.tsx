@@ -27,7 +27,7 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="relative bg-background border-t border-border overflow-hidden">
+   <footer className="relative bg-gradient-to-b from-[#1e3a8a] to-[#172554] text-blue-100 overflow-hidden">
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-radial from-primary/10 via-transparent to-transparent blur-3xl pointer-events-none" />
 
       <div className="container-custom relative z-10">
@@ -45,17 +45,17 @@ export default function Footer() {
               <img
                 src={logo}
                 alt="PS Associates Logo"
-                className="w-10 h-10 rounded-lg object-cover"
+                className="w-11 h-11 object-contain drop-shadow-md"
               />
-              <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary to-accent blur-lg opacity-50 group-hover:opacity-75 transition-opacity" />
+              
             </motion.div>
             <div className="flex flex-col">
-              <span className="font-bold text-lg text-foreground">PS Associates</span>
-              <span className="text-xs text-muted-foreground hidden sm:block">IT Hardware & Manpower</span>
+              <span className="font-bold text-lg text-white">PS Associates</span>
+              <span className="text-xs text-blue-200 hidden sm:block">IT Hardware & Manpower</span>
             </div>
           </Link>
 
-            <p className="text-muted-foreground mb-6">
+            <p className="text-blue-200 mb-6">
               PS Associates delivers timely, high-quality technology solutions
               tailored to diverse industry domains. For over 28 years, we have
               provided ERP solutions, enterprise consulting, IT infrastructure
@@ -63,27 +63,27 @@ export default function Footer() {
             </p>
 
             <div className="space-y-3">
-              <a href="mailto:bdm1@psaitech.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group">
+              <a href="mailto:bdm1@psaitech.com" className="flex items-center gap-3 text-blue-200 hover:text-orange-400 transition-colors group">
                 <Mail className="w-4 h-4" />
                 <span className="text-sm">support@psaitech.com</span>
               </a>
 
-              <a href="mailto:hr@psaitech.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group">
+              <a href="mailto:hr@psaitech.com" className="flex items-center gap-3 text-blue-200 hover:text-orange-400 transition-colors group">
                 <Mail className="w-4 h-4" />
                 <span className="text-sm">bdm1@psaitech.com</span>
               </a>
 
-              <a href="mailto:support@psaitech.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group">
+              <a href="mailto:support@psaitech.com" className="flex items-center gap-3 text-blue-200 hover:text-orange-400 transition-colors group">
                 <Mail className="w-4 h-4" />
                 <span className="text-sm">hr@psaitech.com</span>
               </a>
 
-              <a href="tel:+917554222624" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group">
+              <a href="tel:+917554222624" className="flex items-center gap-3 text-blue-200 hover:text-orange-400 transition-colors group">
                 <Phone className="w-4 h-4" />
                 <span className="text-sm">+91-755-4222624</span>
               </a>
 
-              <div className="flex items-start gap-3 text-muted-foreground">
+              <div className="flex items-start gap-3 text-blue-200 hover:text-orange-400">
                 <MapPin className="w-4 h-4 mt-1" />
                 <span className="text-sm">
                   1A, Ist Floor, Metro Plaza, E-5,
@@ -101,7 +101,7 @@ export default function Footer() {
 
             {/* PRODUCTS & SERVICES */}
             <div>
-              <h4 className="font-semibold text-foreground mb-4">
+              <h4 className="font-semibold text-white mb-4">
                 Products & Services
               </h4>
               <ul className="space-y-3">
@@ -109,7 +109,7 @@ export default function Footer() {
                   <li key={link.name}>
                     <Link
                       to={link.href}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 group"
+                      className="text-sm text-blue-200 hover:text-orange-400 transition-colors flex items-center gap-2 group"
                     >
                       <ArrowRight className="w-3 h-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />
                       {link.name}
@@ -143,8 +143,8 @@ export default function Footer() {
         </div>
 
         {/* BOTTOM BAR */}
-        <div className="py-6 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">
+        <div className="py-6 border-t border-blue-500/30 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-blue-300">
             © {new Date().getFullYear()} PS Associates. All rights reserved.
           </p>
 
@@ -161,7 +161,7 @@ export default function Footer() {
                 whileTap={{ scale: 0.95 }}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/20 transition-colors"
+                className="w-10 h-10 rounded-lg bg-blue-800 flex items-center justify-center text-blue-200 hover:bg-orange-500 hover:text-white transition-colors"
               >
                 <social.icon className="w-4 h-4" />
               </motion.a>
