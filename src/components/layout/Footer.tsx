@@ -55,7 +55,7 @@ export default function Footer() {
             </div>
           </Link>
 
-            <p className="text-blue-200 mb-6">
+            <p className="text-blue-200 mt-4 mb-6">
               PS Associates delivers timely, high-quality technology solutions
               tailored to diverse industry domains. For over 28 years, we have
               provided ERP solutions, enterprise consulting, IT infrastructure
@@ -121,7 +121,7 @@ export default function Footer() {
 
             {/* COMPANY */}
             <div>
-              <h4 className="font-semibold text-foreground mb-4">
+              <h4 className="font-semibold text-white mb-4">
                 Company
               </h4>
               <ul className="space-y-3">
@@ -129,7 +129,7 @@ export default function Footer() {
                   <li key={link.name}>
                     <Link
                       to={link.href}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 group"
+                      className="text-sm text-blue-200 hover:text-orange-400 transition-colors flex items-center gap-2 group"
                     >
                       <ArrowRight className="w-3 h-3 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />
                       {link.name}
