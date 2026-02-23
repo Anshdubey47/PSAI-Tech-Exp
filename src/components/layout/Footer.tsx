@@ -45,7 +45,7 @@ export default function Footer() {
               <img
                 src={logo}
                 alt="PS Associates Logo"
-                className="w-11 h-11 object-contain drop-shadow-md"
+                className="w-10 h-10 rounded-lg object-cover"
               />
               
             </motion.div>
