@@ -1,1 +1,29 @@
+import { useMemo } from "react";
+import "./particleBackground.css";
 
+export default function ParticleBackground() {
+  const circles = useMemo(() => {
+    return Array.from({ length: 100 });
+  }, []);
+
+  return (
+    <div className="particle-container">
+      <img
+        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/221808/sky.jpg"
+        className="background"
+        alt=""
+      />
+
+      <p className="message">
+        all your dreams can come true <br />
+        if you have the courage to pursue them
+      </p>
+
+      {circles.map((_, i) => (
+        <div key={i} className="circle-container">
+          <div className="circle" />
+        </div>
+      ))}
+    </div>
+  );
+}
