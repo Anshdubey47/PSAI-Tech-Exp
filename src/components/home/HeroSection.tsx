@@ -132,7 +132,8 @@ export default function HeroSection() {
       </div>
   
       {/* Scroll Indicator */}
-      {/* <motion.div
+      {/* 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
@@ -145,7 +146,8 @@ export default function HeroSection() {
         >
           <motion.div className="w-1 h-2 rounded-full bg-primary" />
         </motion.div>
-      </motion.div> */}
+      </motion.div> 
+      */}
   </div>
 </div>
     </section>
