@@ -1,9 +1,10 @@
-import ParticleBackground from './particlebackground';
+
 import { motion } from 'framer-motion';
 import { ArrowRight, Shield, Users, Monitor } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import FloatingTech from '../3d/FloatingTech';
+
 import AnimatedNumber from './AnimatedNumber';
+import heroGlass from '@/assets/images/heroglass.jpg';
 
 const stats = [
   { value: 25, suffix: '+', label: 'Years Experience', icon: Shield },
@@ -14,21 +15,28 @@ const stats = [
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* 3D Background */}
-     <particlebackground />
-      
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/40 to-background z-10" />
-      
-      {/* Tech Grid Background */}
-      <div className="absolute inset-0 tech-grid z-0" />
-      
-      {/* Glow Effects */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[128px] z-0" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-[128px] z-0" />
 
-      <div className="container-custom relative z-20 pt-20">
-        <div className="max-w-4xl mx-auto text-center">
+  {/* Background Image */}
+  <motion.img
+    src={heroGlass}
+    alt="Futuristic Glass Structures"
+    initial={{ scale: 1.1 }}
+    animate={{ scale: 1 }}
+    transition={{ duration: 8, ease: "easeOut" }}
+    className="absolute inset-0 w-full h-full object-cover z-0"
+  />
+
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-b from-[#021027]/80 via-[#021027]/70 to-[#021027]/95 z-10" />
+
+  {/* Glow Effects */}
+  <div className="absolute top-1/3 left-1/4 w-[600px] h-[600px] bg-blue-500/20 rounded-full blur-[150px] z-0 animate-pulse" />
+  <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-cyan-400/20 rounded-full blur-[150px] z-0 animate-pulse" />
+    
+      {/* Content */}
+<div className="container-custom relative z-20 pt-20">
+  <div className="max-w-4xl mx-auto text-center">
+  <div className="max-w-4xl mx-auto text-center backdrop-blur-sm bg-white/5 border border-white/10 rounded-3xl p-10">  
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -44,22 +52,24 @@ export default function HeroSection() {
 
           {/* Main Heading */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
-          >
-            <span className="text-foreground">Powering Business</span>
-            <br />
-            <span className="gradient-text">Tech-Driven Growth</span>
-          </motion.h1>
+  initial={{ opacity: 0, y: 60 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+  className="text-5xl md:text-7xl font-bold leading-tight mb-6"
+>
+  <span className="text-white">Building the</span>
+  <br />
+  <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+    Future of Enterprise IT
+  </span>
+</motion.h1>
 
           {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
+            className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10"
           >
             We provide enterprise-grade IT hardware and highly skilled manpower services to power critical operations. From desktops to dedicated engineers, we enable seamless performance and long-term value.
           </motion.p>
@@ -105,7 +115,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                className="glow-card p-6 text-center"
+                className="p-6 text-center backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl shadow-xl"
               >
                 <div className="w-12 h-12 mx-auto mb-4 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
                   <stat.icon className="w-6 h-6 text-primary" />
@@ -121,7 +131,7 @@ export default function HeroSection() {
           </motion.div>
         </div>
       </div>
-
+  
       {/* Scroll Indicator */}
       {/* <motion.div
         initial={{ opacity: 0 }}
@@ -137,6 +147,8 @@ export default function HeroSection() {
           <motion.div className="w-1 h-2 rounded-full bg-primary" />
         </motion.div>
       </motion.div> */}
+  </div>
+</div>
     </section>
   );
 }
