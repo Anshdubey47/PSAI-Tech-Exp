@@ -1,4 +1,4 @@
-import ParticleBackground from './ParticleBackground';
+import ParticleBackground from './particlebackground';
 import { motion } from 'framer-motion';
 import { ArrowRight, Shield, Users, Monitor } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -15,7 +15,7 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* 3D Background */}
-     <ParticleBackground />
+     <particlebackground />
       
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/40 to-background z-10" />
