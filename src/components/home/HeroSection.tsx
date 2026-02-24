@@ -4,7 +4,7 @@ import { ArrowRight, Shield, Users, Monitor } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 import AnimatedNumber from './AnimatedNumber';
-import heroGlass from '@/assets/images/heroglass.jpg';
+import heroGlass from '@/assets/images/heroglass.png';
 
 const stats = [
   { value: 25, suffix: '+', label: 'Years Experience', icon: Shield },
