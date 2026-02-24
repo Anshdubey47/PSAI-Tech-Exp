@@ -297,30 +297,43 @@ export default function About() {
                 consistent growth across all service areas.
               </p>
             </div>
-            <div className="max-w-4xl mx-auto grid gap-6">
-              {timeline.map((item, index) => (
-                <motion.div
-                  key={item.step}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: '-100px' }}
-                  transition={{ delay: index * 0.1 }}
-                  className="grid grid-cols-[auto,1fr] gap-6 items-start"
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="w-10 h-10 rounded-lg bg-background border border-border flex items-center justify-center font-semibold">
-                      {item.step}
-                    </div>
-                    {index < timeline.length - 1 && <div className="flex-1 w-px bg-border mt-2" />}
-                  </div>
-                  <div>
-                    <div className="text-lg font-semibold mb-1">{item.year}</div>
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+            <div className="max-w-6xl mx-auto relative">
+
+  {/* Horizontal Line */}
+  <div className="absolute top-10 left-0 right-0 h-1 bg-blue-200 hidden md:block" />
+
+  <div className="grid grid-cols-1 md:grid-cols-4 gap-10 relative">
+
+    {timeline.map((item, index) => (
+      <motion.div
+        key={item.step}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: index * 0.1 }}
+        className="text-center relative"
+      >
+
+        {/* Timeline Circle */}
+        <div className="relative z-10 w-16 h-16 mx-auto mb-6 rounded-full bg-white border-4 border-blue-600 flex items-center justify-center font-bold text-blue-600 shadow-md">
+          {item.step}
+        </div>
+
+        {/* Year */}
+        <div className="text-xl font-bold mb-2">
+          {item.year}
+        </div>
+
+        {/* Description */}
+        <p className="text-sm text-muted-foreground max-w-xs mx-auto">
+          {item.description}
+        </p>
+
+      </motion.div>
+    ))}
+
+  </div>
+</div>
 <motion.div
   initial={{ opacity: 0, y: 30 }}
   whileInView={{ opacity: 1, y: 0 }}
