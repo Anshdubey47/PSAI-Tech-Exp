@@ -147,7 +147,7 @@ export default function HeroSection() {
           <motion.div className="w-1 h-2 rounded-full bg-primary" />
         </motion.div>
       </motion.div> 
-      */}
+      */
   </div>
 </div>
     </section>
