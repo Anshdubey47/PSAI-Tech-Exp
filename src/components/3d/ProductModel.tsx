@@ -139,11 +139,20 @@ function Printer() {
     </Float>
   );
 }
+function CameraDrift() {
+  useFrame((state) => {
+    state.camera.position.x = Math.sin(state.clock.elapsedTime * 0.05) * 0.3;
+    state.camera.position.y = 1 + Math.cos(state.clock.elapsedTime * 0.15) * 0.2;
+    state.camera.lookAt(0, 0, 0);
+  });
+  return null;
+}
 
 export default function ProductModel({ type }: ProductModelProps) {
   return (
     <div className="w-full h-[300px] md:h-[400px]">
       <Canvas camera={{ position: [0, 1, 6], fov: 50 }}>
+        <CameraDrift /> 
         <ambientLight intensity={0.3} />
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1} color="#00d4ff" />
         <spotLight position={[-10, 10, -10]} angle={0.15} penumbra={1} intensity={0.5} color="#8b5cf6" />
