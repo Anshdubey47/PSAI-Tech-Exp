@@ -329,11 +329,12 @@ export default function About() {
           {item.description}
         </p>
 
-      </motion.div>
+     </motion.div>
     ))}
 
   </div>
 </div>
+            </motion.div>
 <motion.div
   initial={{ opacity: 0, y: 30 }}
   whileInView={{ opacity: 1, y: 0 }}
