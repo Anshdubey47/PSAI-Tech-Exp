@@ -35,7 +35,6 @@ export default function HeroSection() {
     
       {/* Content */}
 <div className="container-custom relative z-20 pt-20">
-  <div className="max-w-4xl mx-auto text-center">
   <div className="max-w-4xl mx-auto text-center backdrop-blur-sm bg-white/5 border border-white/10 rounded-3xl p-10">  
           {/* Badge */}
           <motion.div
