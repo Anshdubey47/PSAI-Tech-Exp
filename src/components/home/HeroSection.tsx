@@ -111,8 +111,9 @@ export default function HeroSection() {
                  rounded-2xl 
                   shadow-[0_0_30px_rgba(0,255,255,0.15)]"
                     >
-                <div className="w-12 h-12 mx-auto mb-4 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <stat.icon className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 mx-auto mb-4 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center">
+                <stat.icon className="w-6 h-6 text-cyan-300" />
+                </div>
                 </div>
                 <AnimatedNumber
                   value={stat.value}
