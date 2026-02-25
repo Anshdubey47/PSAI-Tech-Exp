@@ -87,7 +87,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10"
+            className="text-lg md:text-xl text-cyan-300 max-w-2xl mx-auto mb-10"
           >
             We provide enterprise-grade IT hardware and highly skilled manpower services to power critical operations.
           </motion.p>
@@ -112,7 +112,7 @@ export default function HeroSection() {
                   shadow-[0_0_30px_rgba(0,255,255,0.15)]"
                     >
                 <div className="w-12 h-12 mx-auto mb-4 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center">
-                <stat.icon className="w-6 h-6 text-cyan-300" />
+                <stat.icon className="w-6 h-6 text-orange-400" />
                 </div>
                 
                 <AnimatedNumber
