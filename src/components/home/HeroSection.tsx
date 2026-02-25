@@ -16,6 +16,11 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
 
+      <motion.div
+  className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(0,200,255,0.15),transparent_60%)] z-0"
+  animate={{ opacity: [0.6, 1, 0.6] }}
+  transition={{ duration: 6, repeat: Infinity }}
+/>
   {/* Background Image */}
   <motion.img
   src={heroGlass}
