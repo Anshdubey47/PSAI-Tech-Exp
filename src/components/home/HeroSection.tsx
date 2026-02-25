@@ -13,21 +13,6 @@ const stats = [
 ];
 
 export default function HeroSection() {
-  
- import { motion } from 'framer-motion';
-import { ArrowRight, Shield, Users, Monitor } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
-import AnimatedNumber from './AnimatedNumber';
-import heroGlass from '@/assets/images/heroglass.png';
-
-const stats = [
-  { value: 25, suffix: '+', label: 'Years Experience', icon: Shield },
-  { value: 500, suffix: '+', label: 'Projects Delivered', icon: Monitor },
-  { value: 2000, suffix: '+', label: 'Manpower Deployed', icon: Users },
-];
-
-export default function HeroSection() {
   return (
   
       <motion.div
