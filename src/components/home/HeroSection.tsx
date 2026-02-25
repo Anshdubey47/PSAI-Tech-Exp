@@ -13,6 +13,21 @@ const stats = [
 ];
 
 export default function HeroSection() {
+  
+ import { motion } from 'framer-motion';
+import { ArrowRight, Shield, Users, Monitor } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+import AnimatedNumber from './AnimatedNumber';
+import heroGlass from '@/assets/images/heroglass.png';
+
+const stats = [
+  { value: 25, suffix: '+', label: 'Years Experience', icon: Shield },
+  { value: 500, suffix: '+', label: 'Projects Delivered', icon: Monitor },
+  { value: 2000, suffix: '+', label: 'Manpower Deployed', icon: Users },
+];
+
+export default function HeroSection() {
   return (
   
       <motion.div
@@ -59,6 +74,104 @@ export default function HeroSection() {
   transition={{ duration: 1 }}
   className="relative max-w-4xl mx-auto text-center backdrop-blur-xl bg-white/10 border border-white/10 rounded-3xl p-10 shadow-[0_0_80px_rgba(0,200,255,0.2)] overflow-hidden"
 >
+   
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mb-6"
+          >
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              Your Trusted IT Solutions Partner
+            </span>
+          </motion.div>
+
+          {/* Main Heading */}
+          <motion.h1
+  initial={{ opacity: 0, y: 60 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+  className="text-5xl md:text-7xl font-bold leading-tight mb-6"
+>
+  <span className="text-white">Building the</span>
+  <br />
+  <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+    Future of Enterprise IT
+  </span>
+</motion.h1>
+
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10"
+          >
+            We provide enterprise-grade IT hardware and highly skilled manpower services to power critical operations. From desktops to dedicated engineers, we enable seamless performance and long-term value.
+          </motion.p>
+
+          {/* CTA Buttons */}
+          {/* <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+          > */}
+            {/* <Link to="/products">
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="glow-button text-primary-foreground flex items-center gap-2"
+              >
+                Explore Products
+                <ArrowRight className="w-4 h-4" />
+              </motion.button>
+            </Link>
+            <Link to="/contact">
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="px-6 py-3 rounded-lg border border-border text-foreground font-semibold hover:bg-secondary transition-colors"
+              >
+                Get a Quote
+              </motion.button>
+            </Link>
+          </motion.div> */}
+
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto"
+          >
+            {stats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+                className="p-6 text-center backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl shadow-xl"
+              >
+                <div className="w-12 h-12 mx-auto mb-4 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                  <stat.icon className="w-6 h-6 text-primary" />
+                </div>
+                <AnimatedNumber
+                  value={stat.value}
+                  suffix={stat.suffix}
+                  className="text-3xl font-bold gradient-text mb-1"
+                />
+                <div className="text-sm text-muted-foreground">{stat.label}</div>
+              </motion.div>
+            ))}
+            </motion.div>   
+    </motion.div>   
+        </div>
+    </section>
+  );
+}
    
           {/* Badge */}
           <motion.div
