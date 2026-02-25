@@ -46,7 +46,13 @@ export default function HeroSection() {
     
       {/* Content */}
 <div className="container-custom relative z-20 pt-20">
-  <div className="max-w-4xl mx-auto text-center backdrop-blur-sm bg-white/5 border border-white/10 rounded-3xl p-10">  
+  <motion.div
+  initial={{ opacity: 0, scale: 0.95 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1 }}
+  className="relative max-w-4xl mx-auto text-center backdrop-blur-xl bg-white/10 border border-white/10 rounded-3xl p-10 shadow-[0_0_80px_rgba(0,200,255,0.2)] overflow-hidden"
+>
+   
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -138,9 +144,10 @@ export default function HeroSection() {
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
               </motion.div>
             ))}
-          </motion.div>
+            </motion.div>   
+          
         </div>
-      </div>
+     
     </section>
   );
 }
