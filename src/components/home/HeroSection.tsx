@@ -4,7 +4,7 @@ import { ArrowRight, Shield, Users, Monitor } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 import AnimatedNumber from './AnimatedNumber';
-import heroGlass from '@/assets/images/heroglass.png';
+import heroGlass from '@/public/HeroVideoAi.mp4';
 
 const stats = [
   { value: 25, suffix: '+', label: 'Years Experience', icon: Shield },
@@ -16,21 +16,16 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
 
-      {/* Background Image */}
-      <motion.img
-        src={heroGlass}
-        alt="Futuristic Glass Structures"
-        animate={{
-          scale: [1, 1.05, 1],
-          x: [0, -20, 0],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      />
+      {/* Background Video */}
+      <video
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="absolute inset-0 w-full h-full object-cover z-0"
+>
+  <source src="/videos/hero.mp4" type="video/mp4" />
+</video>
 
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#021027]/80 via-[#021027]/70 to-[#021027]/95 z-10" />
