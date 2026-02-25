@@ -1,4 +1,4 @@
-
+import heroVideo from '@/assets/HeroVideoAi.mp4';
 import { motion } from 'framer-motion';
 import { ArrowRight, Shield, Users, Monitor } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -17,15 +17,8 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
 
       {/* Background Video */}
-      <video
-  autoPlay
-  muted
-  loop
-  playsInline
-  className="absolute inset-0 w-full h-full object-cover z-0"
->
-  <source src="/HeroVideoAi.mp4" type="video/mp4" />
-
+     <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0">
+  <source src={heroVideo} type="video/mp4" />
 </video>
 
       {/* Dark Overlay */}
