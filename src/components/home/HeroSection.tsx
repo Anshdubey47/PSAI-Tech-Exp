@@ -14,13 +14,20 @@ const stats = [
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-
+  
       <motion.div
-  className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(0,200,255,0.15),transparent_60%)] z-0"
-  animate={{ opacity: [0.6, 1, 0.6] }}
-  transition={{ duration: 6, repeat: Infinity }}
-/>
+  initial={{ opacity: 0, scale: 0.95 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1 }}
+  className="relative max-w-4xl mx-auto text-center backdrop-blur-xl bg-white/10 border border-white/10 rounded-3xl p-10 shadow-[0_0_80px_rgba(0,200,255,0.2)] overflow-hidden"
+>
+
+  {/* Riviera Light Sweep */}
+  <motion.div
+    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+    animate={{ x: ["-100%", "100%"] }}
+    transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+  />
   {/* Background Image */}
   <motion.img
   src={heroGlass}
