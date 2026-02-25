@@ -18,13 +18,19 @@ export default function HeroSection() {
 
   {/* Background Image */}
   <motion.img
-    src={heroGlass}
-    alt="Futuristic Glass Structures"
-    initial={{ scale: 1.1 }}
-    animate={{ scale: 1 }}
-    transition={{ duration: 8, ease: "easeOut" }}
-    className="absolute inset-0 w-full h-full object-cover z-0"
-  />
+  src={heroGlass}
+  alt="Futuristic Glass Structures"
+  animate={{
+    scale: [1, 1.05, 1],
+    x: [0, -20, 0],
+  }}
+  transition={{
+    duration: 20,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+  className="absolute inset-0 w-full h-full object-cover z-0"
+/>
 
   {/* Dark Overlay */}
   <div className="absolute inset-0 bg-gradient-to-b from-[#021027]/80 via-[#021027]/70 to-[#021027]/95 z-10" />
