@@ -120,7 +120,7 @@ export default function HeroSection() {
                   suffix={stat.suffix}
                   className="text-3xl font-bold text-orange-400 mb-1"
                 />
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
+                <div className="text-sm text-cyan-300">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
