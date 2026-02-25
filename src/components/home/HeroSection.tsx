@@ -62,8 +62,8 @@ export default function HeroSection() {
             transition={{ duration: 0.5 }}
             className="mb-6"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-400/30 text-orange-300 text-sm font-medium">
+              <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
               Your Trusted IT Solutions Partner
             </span>
           </motion.div>
@@ -118,7 +118,7 @@ export default function HeroSection() {
                 <AnimatedNumber
                   value={stat.value}
                   suffix={stat.suffix}
-                  className="text-3xl font-bold text-cyan-300 mb-1"
+                  className="text-3xl font-bold text-orange-400 mb-1"
                 />
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
               </motion.div>
