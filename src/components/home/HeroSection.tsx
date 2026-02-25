@@ -105,15 +105,19 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                className="p-6 text-center backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl shadow-xl"
-              >
+                className="p-6 text-center backdrop-blur-md 
+                 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 
+                 border border-cyan-400/20 
+                 rounded-2xl 
+                  shadow-[0_0_30px_rgba(0,255,255,0.15)]"
+                    >
                 <div className="w-12 h-12 mx-auto mb-4 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
                   <stat.icon className="w-6 h-6 text-primary" />
                 </div>
                 <AnimatedNumber
                   value={stat.value}
                   suffix={stat.suffix}
-                  className="text-3xl font-bold gradient-text mb-1"
+                  className="text-3xl font-bold text-cyan-300 mb-1"
                 />
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
               </motion.div>
