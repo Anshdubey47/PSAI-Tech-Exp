@@ -4,7 +4,7 @@ import { ArrowRight, Shield, Users, Monitor } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 import AnimatedNumber from './AnimatedNumber';
-import heroGlass from '@/public/HeroVideoAi.mp4';
+
 
 const stats = [
   { value: 25, suffix: '+', label: 'Years Experience', icon: Shield },
@@ -24,11 +24,12 @@ export default function HeroSection() {
   playsInline
   className="absolute inset-0 w-full h-full object-cover z-0"
 >
-  <source src="heroGlass" type="video/mp4" />
+  <source src="/HeroVideoAi.mp4" type="video/mp4" />
+
 </video>
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#021027]/80 via-[#021027]/70 to-[#021027]/95 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#021027]/50 via-[#021027]/40 to-[#021027]/70" />
 
       {/* Glow Effects */}
       <div className="absolute top-1/3 left-1/4 w-[600px] h-[600px] bg-blue-500/20 rounded-full blur-[150px] z-0 animate-pulse" />
