@@ -114,7 +114,7 @@ export default function HeroSection() {
                 <div className="w-12 h-12 mx-auto mb-4 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center">
                 <stat.icon className="w-6 h-6 text-cyan-300" />
                 </div>
-                </div>
+                
                 <AnimatedNumber
                   value={stat.value}
                   suffix={stat.suffix}
