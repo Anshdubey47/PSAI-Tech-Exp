@@ -4,11 +4,14 @@ import ServicesSection from '@/components/home/ServicesSection';
 import ClientsSection from '@/components/home/ClientsSection';
 import WhyChooseUsSection from '@/components/home/WhyChooseUsSection';
 import CTASection from '@/components/home/CTASection';
+import { motion } from "framer-motion";
+import OfficialDistributorSection from "@/components/home/OfficialDistributorSection";
 
 const Index = () => {
   return (
     <Layout>
       <HeroSection />
+      <OfficialDistributorSection/>
       <ServicesSection />
       <ClientsSection />
       <WhyChooseUsSection />
