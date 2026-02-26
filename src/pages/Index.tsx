@@ -5,13 +5,13 @@ import ClientsSection from '@/components/home/ClientsSection';
 import WhyChooseUsSection from '@/components/home/WhyChooseUsSection';
 import CTASection from '@/components/home/CTASection';
 import { motion } from "framer-motion";
-import OfficialDistributorSection from "@/components/home/OfficialDistributorSection";
+import ODSection from "@/components/home/OfficialDistrubuterSection.tsx";
 
 const Index = () => {
   return (
     <Layout>
       <HeroSection />
-      <OfficialDistributorSection/>
+      <OfficialDistributorSection />
       <ServicesSection />
       <ClientsSection />
       <WhyChooseUsSection />
