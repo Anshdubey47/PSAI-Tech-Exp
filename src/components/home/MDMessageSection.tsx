@@ -3,7 +3,7 @@ import mdImage from "@/assets/images/leaders/Image10.png"; // replace with your 
 
 export default function MDMessageSection() {
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section className="py-28 bg-gradient-to-br from-primary/5 via-background to-accent/5 relative overflow-hidden">
       <div className="container-custom">
 
         <motion.div
@@ -16,11 +16,11 @@ export default function MDMessageSection() {
 
           {/* Left - Image */}
           <div className="flex justify-center">
-            <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-2xl border-8 border-primary/20">
+            <div className="relative w-96 h-96 md:w-[28rem] md:h-[28rem] rounded-full overflow-hidden shadow-2xl border-8 border-primary/20">
               <img
                 src={mdImage}
                 alt="Managing Director"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-[50%_15%]"
               />
             </div>
           </div>
