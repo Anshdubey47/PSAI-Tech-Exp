@@ -123,21 +123,6 @@ const leaders = [
     role: 'Business Development Manager',
     src: leaderImage5,
   },
-  {
-    name: 'Rukmani Singh',
-    role: 'Gem',
-    src: leaderImage6,
-  },
-  {
-    name: 'Niharika Uchchasare',
-    role: 'HR',
-    src: leaderImage7,
-  },
-  {
-    name: 'Sachin',
-    role: 'Accounts',
-    src: leaderImage8,
-  },
 ];
 
 export default function About() {
