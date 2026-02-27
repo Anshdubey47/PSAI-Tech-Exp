@@ -45,7 +45,7 @@ export default function MDMessageSection() {
   <div className="mt-6 text-sm tracking-widest uppercase text-white font-semibold opacity-90">
     — Managing Director
   </div>
-
+</div>
 </div>
      </motion.div>
       </div>
