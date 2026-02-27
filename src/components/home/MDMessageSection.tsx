@@ -27,19 +27,29 @@ export default function MDMessageSection() {
 
           {/* Right - Content */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Message from the <span className="gradient-text">Managing Director</span>
+            <h2 className="text-5xl md:text-6xl font-bold tracking-tight leading-tight">
+              Message from the <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Managing Director</span>
             </h2>
 
             {/* Highlight Quote */}
-            <div className="bg-primary text-white p-6 rounded-xl mb-6 shadow-lg">
-              <p className="text-lg font-medium">
-                “Technology empowers transformation, but people drive true progress.
-                Our commitment is to build trust, deliver excellence, and create
-                long-term value for our clients and communities.”
-              </p>
-              <p className="mt-4 font-semibold">— Managing Director</p>
-            </div>
+            <div className="relative bg-gradient-to-br from-blue-700 to-blue-900 text-white p-10 md:p-12 rounded-3xl shadow-2xl overflow-hidden">
+
+  {/* Decorative Glow */}
+  <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+
+  {/* Quote Mark */}
+  <div className="text-5xl opacity-20 font-serif mb-4">“</div>
+
+  <p className="text-lg md:text-xl leading-relaxed font-medium tracking-wide">
+    Technology empowers transformation, but people drive true progress.
+    Our commitment is to build trust, deliver excellence, and create
+    long-term value for our clients and communities.
+  </p>
+
+  <div className="mt-6 text-sm md:text-base font-semibold tracking-wider uppercase opacity-90">
+    — Managing Director
+  </div>
+</div>
 
             {/* Full Message */}
             <p className="text-muted-foreground leading-relaxed">
