@@ -3,7 +3,7 @@ import mpLogo from "@/assets/images/mpvidhansabha.png"
 
 export default function OfficialDistributorSection() {
   return (
-    <section className="py-24 bg-gradient-to-r from-primary to-primary/80 text-white relative overflow-hidden">
+    <section className="py-24 md:py-32 bg-gradient-to-r from-primary to-primary/80 text-white relative overflow-hidden">
 
   <div className="container-custom text-center">
 
@@ -16,13 +16,13 @@ export default function OfficialDistributorSection() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="flex justify-center items-center gap-10 mb-8"
+      className="flex flex-col items-center gap-6 mb-8"
     >
-      <div className="w-px h-12 bg-white/40" />
+     
       <img
         src={mpLogo}
         alt="MP Vidhan Sabha"
-        className="h-20 object-contain grayscale hover:grayscale-0 transition duration-300"
+        className="h-28 md:h-32 object-contain mx-auto"
       />
     </motion.div>
 
