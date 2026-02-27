@@ -99,11 +99,6 @@ const certificates: Certificate[] = [
 
 const leaders = [
   {
-    name: 'Mahesh dubey',
-    role: 'CEO PS associates',
-    src: leaderImage1,
-  },
-  {
     name: 'Gyanendra Mudgal',
     role: 'Regional Manager Mumbai',
     src: leaderImage2,
