@@ -27,26 +27,22 @@ export default function MDMessageSection() {
 
           {/* Right - Content */}
           <div>
-            <h2 className="text-5xl md:text-6xl font-bold tracking-tight leading-tight">
-              Message from the <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Managing Director</span>
-            </h2>
+            <h2 className="text-5xl md:text-6xl font-bold tracking-tight leading-tight text-gray-900">
+  Message from the <span className="text-primary">Managing Director</span>
+</h2>
 
             {/* Highlight Quote */}
-            <div className="relative bg-gradient-to-br from-blue-700 to-blue-900 text-white p-10 md:p-12 rounded-3xl shadow-2xl overflow-hidden">
+            <div className="bg-white border border-primary/10 rounded-2xl p-10 md:p-12 shadow-lg">
 
-  {/* Decorative Glow */}
-  <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+  <div className="text-primary text-4xl mb-6 font-serif opacity-70">“</div>
 
-  {/* Quote Mark */}
-  <div className="text-5xl opacity-20 font-serif mb-4">“</div>
-
-  <p className="text-lg md:text-xl leading-relaxed font-medium tracking-wide">
+  <p className="text-xl md:text-2xl leading-relaxed text-gray-800 font-medium">
     Technology empowers transformation, but people drive true progress.
     Our commitment is to build trust, deliver excellence, and create
     long-term value for our clients and communities.
   </p>
 
-  <div className="mt-6 text-sm md:text-base font-semibold tracking-wider uppercase opacity-90">
+  <div className="mt-8 text-sm tracking-widest uppercase text-primary font-semibold">
     — Managing Director
   </div>
 </div>
