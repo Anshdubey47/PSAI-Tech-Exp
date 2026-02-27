@@ -1,11 +1,22 @@
 import { motion } from "framer-motion";
 import mpLogo from "@/assets/images/mpvidhansabha.png"
+import vidhansabha from "@/assets/images/VidhanSabhaImages/VidhanSabha.jpeg"
 
 export default function OfficialDistributorSection() {
   return (
-    <section className="mt-24 md:mt-32 py-28 bg-gradient-to-r from-primary to-primary/80 text-white relative overflow-hidden">
-
-  <div className="container-custom text-center">
+    <section
+  className="relative mt-24 md:mt-32 py-32 text-white"
+  style={{
+    backgroundImage: `url(${vidhansabha})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+      
+>
+      {/*Overlay*/}
+      <div className="absolute inset-0 bg-black/60"></div>
+      {/*Content*/}
+  <div className="relative z-10 container-custom text-center">
 
     <p className="text-sm tracking-widest uppercase text-white/70 mb-6">
       Authorized Distribution Partner
