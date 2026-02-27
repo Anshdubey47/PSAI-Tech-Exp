@@ -46,7 +46,7 @@ As we move forward, our vision is to strengthen our impact, expand our capabilit
   </p>
 
   <div className="mt-6 text-sm tracking-widest uppercase text-white font-semibold opacity-90">
-    — Managing Director
+    — Mr.Mahesh Dubey (Managing Director)
   </div>
 </div>
 </div>
