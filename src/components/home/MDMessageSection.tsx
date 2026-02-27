@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import mdImage from "@/assets/images/Image10.png"; // replace with your image
+import mdImage from "@/assets/images/leaders/Image10.png"; // replace with your image
 
 export default function MDMessageSection() {
   return (
