@@ -3,7 +3,7 @@ import mpLogo from "@/assets/images/mpvidhansabha.png"
 
 export default function OfficialDistributorSection() {
   return (
-    <section className="py-24 md:py-32 bg-gradient-to-r from-primary to-primary/80 text-white relative overflow-hidden">
+    <section className="mt-24 md:mt-32 py-28 bg-gradient-to-r from-primary to-primary/80 text-white relative overflow-hidden">
 
   <div className="container-custom text-center">
 
