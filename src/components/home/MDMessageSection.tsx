@@ -37,12 +37,11 @@ export default function MDMessageSection() {
   <div className="text-white text-3xl mb-4 font-serif opacity-40">“</div>
 
   <p className="text-base md:text-lg leading-relaxed font-medium text-white">
-    At PS Associates, we believe sustainable success is built on trust, discipline, and forward-thinking leadership.
-Over the years, our focus has remained clear — to deliver reliable, high-quality technology and workforce solutions that create measurable value for our clients.
-We continuously adapt to evolving industry demands while maintaining the integrity and standards that define our organization.
-Our commitment goes beyond project execution; we aim to build enduring partnerships rooted in transparency and performance.
-By combining innovation with operational excellence, we empower enterprises and government institutions to operate with confidence and efficiency.
-As we move forward, our vision is to strengthen our impact, expand our capabilities, and remain a trusted partner in progress.
+    At PS Associates, we believe sustainable success is built on trust, integrity, and forward-thinking leadership.
+Our focus has always been to deliver reliable, high-quality technology and workforce solutions that create measurable value for our clients.
+We adapt to evolving industry demands while maintaining the standards that define our organization.
+Beyond execution, we strive to build long-term partnerships grounded in transparency and performance.
+As we move forward, our vision remains clear — to strengthen our impact, expand our capabilities, and remain a trusted partner in progress.
   </p>
 
   <div className="mt-6 text-sm tracking-widest uppercase text-white font-semibold opacity-90">
