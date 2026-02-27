@@ -32,19 +32,20 @@ export default function MDMessageSection() {
 </h2>
 
             {/* Highlight Quote */}
-            <div className="bg-primary text-white p-6 md:p-8 rounded-2xl shadow-lg">
+            <div className="bg-primary text-white border border-primary/10 rounded-2xl p-5 md:p-6 shadow-lg">
 
-  <div className="text-white text-3xl mb-6 font-serif opacity-40">“</div>
+  <div className="text-white text-3xl mb-4 font-serif opacity-40">“</div>
 
-  <p className="text-lg md:text-xl leading-relaxed">
+  <p className="text-lg md:text-xl leading-relaxed font-medium text-white">
     Technology empowers transformation, but people drive true progress.
     Our commitment is to build trust, deliver excellence, and create
     long-term value for our clients and communities.
   </p>
 
-  <div className="mt-8 text-sm tracking-widest uppercase text-primary font-semibold">
+  <div className="mt-6 text-sm tracking-widest uppercase text-white font-semibold opacity-90">
     — Managing Director
   </div>
+
 </div>
 
             {/* Full Message */}
