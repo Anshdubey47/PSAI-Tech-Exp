@@ -32,11 +32,11 @@ export default function MDMessageSection() {
 </h2>
 
             {/* Highlight Quote */}
-            <div className="bg-primary text-white border border-primary/10 rounded-2xl p-5 md:p-6 shadow-lg">
+            <div className="bg-primary text-white rounded-2xl p-4 md:p-6 shadow-md max-w-2xl">
 
   <div className="text-white text-3xl mb-4 font-serif opacity-40">“</div>
 
-  <p className="text-lg md:text-xl leading-relaxed font-medium text-white">
+  <p className="text-base md:text-lg leading-relaxed font-medium text-white">
     Technology empowers transformation, but people drive true progress.
     Our commitment is to build trust, deliver excellence, and create
     long-term value for our clients and communities.
@@ -47,17 +47,7 @@ export default function MDMessageSection() {
   </div>
 
 </div>
-
-            {/* Full Message */}
-            <p className="text-muted-foreground leading-relaxed">
-              At PS Associates, we believe in building sustainable partnerships
-              through innovation, integrity, and execution excellence. As the
-              digital landscape evolves, we remain focused on delivering
-              enterprise-grade solutions that create measurable impact.
-            </p>
-          </div>
-
-        </motion.div>
+     </motion.div>
       </div>
     </section>
   );
