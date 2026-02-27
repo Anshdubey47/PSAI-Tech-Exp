@@ -17,6 +17,7 @@ import certImage1 from '@/assets/images/certificates/image.png';
 import certImage2 from '@/assets/images/certificates/image copy.png';
 import certImage3 from '@/assets/images/certificates/image copy 2.png';
 import certImage4 from '@/assets/images/certificates/image copy 3.png';
+import MDMessageSection from '@/components/home/MDMessageSection';
 
 import cert1 from '@/assets/images/certificates/cert1.png';
 import certificatenew from '@/assets/images/certificates/certificatenew.png';
@@ -382,6 +383,7 @@ export default function About() {
 
   </div>
 </motion.div>
+          <MDMessageSection />
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
