@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
 import Layout from '@/components/layout/Layout';
-import PSU from '@/assets/images/Industries/GovermentandPSU.jpg';
-import Media from '@/assets/images/Industries/MediaEntertainment.jpg';
+
 
 /* Banner Image */
 import industriesBg from '@/assets/images/industriesbg.png';
+/* Service Images - Import them here */
+import PSU from '@/assets/images/Industries/GovermentandPSU.jpg';
+import Media from '@/assets/images/Industries/MediaEntertainment.jpg';
 
 const industries = [
   {
@@ -143,22 +145,16 @@ export default function Industries() {
               <motion.div
                 key={item.id}
                 variants={card}
-                whileHover={{
-                  y: -10,
-                  scale: 1.03,
-                }}
+                whileHover={{ y: -10, scale: 1.03 }}
                 className="glow-card p-7 group relative overflow-hidden"
               >
                 {/* Hover Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition" />
 
-                {/* Number */}
-                <motion.div
-                  whileHover={{ scale: 1.07 }}
-                  className="text-4xl font-bold text-primary mb-3 relative z-7"
-                >
+                <div className="text-4xl font-bold text-primary mb-3 relative z-10">
                   {item.id}
-                </motion.div>
+                </div>
+                
                {/* Image */}
                 {item.image && (
                   <div className="mb-4 relative z-10">
@@ -188,7 +184,7 @@ export default function Industries() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative rounded-2xl overflow-hidden mb-10"
+            className="relative rounded-2xl overflow-hidden"
           >
             {/* Background Image */}
             <img
