@@ -19,7 +19,7 @@ export default function OfficialDistributorSection() {
   <div className="relative z-10 container-custom text-center">
 
     <p className="text-sm tracking-widest uppercase text-white/70 mb-6">
-      Authorized Distribution Partner
+      Authorized NeVA Partner
     </p>
 
     <motion.div
@@ -38,7 +38,7 @@ export default function OfficialDistributorSection() {
     </motion.div>
 
     <h2 className="text-2xl md:text-4xl font-semibold max-w-3xl mx-auto">
-      Official Hardware Distribution Partner to
+      Official Nation-E Vidhan Sabha Partner to
       <span className="text-white font-bold"> MP Vidhan Sabha</span>
     </h2>
 
