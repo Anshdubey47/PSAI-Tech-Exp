@@ -11,13 +11,13 @@ import Media from '@/assets/images/Industries/MediaEntertainment.jpg';
 const industries = [
   {
     id: '01',
-    image: 'PSU',
+    image:PSU,
     title: 'Government & PSUs',
     desc: 'Work in different fields and maintain hardware services in cooperative banking & power industries.',
   },
   {
     id: '02',
-    image: 'Media',
+    image:Media,
     title: 'Media & Entertainment',
     desc: 'Renewing the global communications, entertainment, and media ecosystems with next-generation digital solutions.',
   },
