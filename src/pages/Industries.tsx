@@ -159,7 +159,16 @@ export default function Industries() {
                 >
                   {item.id}
                 </motion.div>
-
+               {/* Image */}
+                {item.image && (
+                  <div className="mb-4 relative z-10">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-70 object-cover rounded-lg"
+                    />
+                  </div>
+                )}
                 {/* Title */}
                 <h3 className="text-lg font-semibold mb-3 relative z-10">
                   {item.title}
