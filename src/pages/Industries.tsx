@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Layout from '@/components/layout/Layout';
-import PSU from '@/assets/images/partners/GovermentandPSU.jpg';
-import Media from '@/assets/images/partners/MediaEntertainment.jpg';
+import PSU from '@/assets/images/Industries/GovermentandPSU.jpg';
+import Media from '@/assets/images/Industries/MediaEntertainment.jpg';
 
 /* Banner Image */
 import industriesBg from '@/assets/images/industriesbg.png';
