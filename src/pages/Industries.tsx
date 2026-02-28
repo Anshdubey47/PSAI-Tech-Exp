@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import Layout from '@/components/layout/Layout';
+import hpe from '@/assets/images/partners/GovermentandPSU.jpg';
+import tcs from '@/assets/images/partners/MediaEntertainment.jpg';
 
 /* Banner Image */
 import industriesBg from '@/assets/images/industriesbg.png';
