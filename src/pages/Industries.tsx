@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Layout from '@/components/layout/Layout';
-import hpe from '@/assets/images/partners/GovermentandPSU.jpg';
-import tcs from '@/assets/images/partners/MediaEntertainment.jpg';
+import PSU from '@/assets/images/partners/GovermentandPSU.jpg';
+import Media from '@/assets/images/partners/MediaEntertainment.jpg';
 
 /* Banner Image */
 import industriesBg from '@/assets/images/industriesbg.png';
@@ -9,11 +9,13 @@ import industriesBg from '@/assets/images/industriesbg.png';
 const industries = [
   {
     id: '01',
+    image: 'PSU',
     title: 'Government & PSUs',
     desc: 'Work in different fields and maintain hardware services in cooperative banking & power industries.',
   },
   {
     id: '02',
+    image: 'Media',
     title: 'Media & Entertainment',
     desc: 'Renewing the global communications, entertainment, and media ecosystems with next-generation digital solutions.',
   },
