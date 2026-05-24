@@ -1,358 +1,252 @@
-import { motion } from 'framer-motion';
-import Layout from '@/components/layout/Layout';
+import React, { useState, useEffect } from 'react';
+import { SectionHeader } from '../components/ui/SectionHeader';
+import { ScrollReveal } from '../components/ui/ScrollReveal';
+import { partners, clients } from '../data/content';
 
-/* ========== PARTNER LOGOS ========== */
-
-import hpe from '@/assets/images/partners/hpe.png';
-import tcs from '@/assets/images/partners/tcs.png';
-import microsoft from '@/assets/images/partners/microsoft.png';
-import intel from '@/assets/images/partners/intel.png';
-import samsung from '@/assets/images/partners/samsung.png';
-import dlink from '@/assets/images/partners/dlink.png';
-import cisco from '@/assets/images/partners/cisco.png';
-import epson from '@/assets/images/partners/epson.png';
-import array from '@/assets/images/partners/array.png';
-import aws from '@/assets/images/partners/aws.png';
-import cloudbolt from '@/assets/images/partners/cloudbolt.png';
-import edb from '@/assets/images/partners/edb.png';
-import ibm from '@/assets/images/partners/ibm.png';
-import ifs from '@/assets/images/partners/ifs.png';
-import iron from '@/assets/images/partners/iron.png';
-import nutanix from '@/assets/images/partners/nutanix.png';
-import opentext from '@/assets/images/partners/opentext.png';
-import oracle from '@/assets/images/partners/oracle.png';
-import paloalto from '@/assets/images/partners/paloalto.png';
-import redhat from '@/assets/images/partners/redhat.png';
-import sap from '@/assets/images/partners/sap.png';
-import versa from '@/assets/images/partners/versa.png';
-import vmware from '@/assets/images/partners/vmware.png';
-import people from '@/assets/images/partners/people.png';
-import brother from '@/assets/images/partners/brother.png';
-import acer from '@/assets/images/partners/acer.png';
-import globus from '@/assets/images/partners/globus.png';
-import hp from '@/assets/images/partners/hp.png';
-import dell from '@/assets/images/partners/dell.png';
-import canon from '@/assets/images/partners/canon.png';
-
-/* ========== CLIENT LOGOS ========== */
-
-import c1 from '@/assets/images/clients/c1.png';
-import c2 from '@/assets/images/clients/c2.png';
-import c3 from '@/assets/images/clients/c3.png';
-import c4 from '@/assets/images/clients/c4.png';
-import c5 from '@/assets/images/clients/c5.png';
-import c6 from '@/assets/images/clients/c6.png';
-import c7 from '@/assets/images/clients/c7.png';
-import c8 from '@/assets/images/clients/c8.png';
-import c9 from '@/assets/images/clients/c9.png';
-import c10 from '@/assets/images/clients/c10.png';
-import c11 from '@/assets/images/clients/c11.png';
-import c12 from '@/assets/images/clients/c12.png';
-import c13 from '@/assets/images/clients/c13.png';
-import c14 from '@/assets/images/clients/c14.png';
-import c15 from '@/assets/images/clients/c15.png';
-import c16 from '@/assets/images/clients/c16.png';
-import c17 from '@/assets/images/clients/c17.png';
-import c18 from '@/assets/images/clients/c18.png';
-import c19 from '@/assets/images/clients/c19.png';
-import c20 from '@/assets/images/clients/c20.png';
-import c21 from '@/assets/images/clients/c21.png';
-import c22 from '@/assets/images/clients/c22.png';
-import c23 from '@/assets/images/clients/c23.png';
-/* ========== PARTNERS DATA ========== */
-
-const partners = [
-  {
-    name: 'Intel',
-    logo: intel,
-    desc: 'Technology Provider',
-  },
-  {
-    name: 'Dell',
-    logo: dell,
-    desc: 'Enterprise IT & Infrastructure Solutions Partner',
-  },
-  {
-    name: 'Canon',
-    logo: canon,
-    desc: 'IT & Solutions Partner',
-  },
-  {
-    name: 'Microsoft',
-    logo: microsoft,
-    desc: 'Cloud & Software Partner',
-  },
-  {
-    name: 'Amazon Web Services',
-    logo: aws,
-    desc: 'Cloud Services Partner',
-  },
-   {
-    name: 'Cisco',
-    logo: cisco,
-    desc: 'Networking Solutions Partner',
-  },
-  {
-    name: 'IBM',
-    logo: ibm,
-    desc: 'IT & Consulting Partner',
-  },
+export const Partners: React.FC = () => {
+  // Top 8 featured partners for the circular orbit visualization
+  const orbitPartners = partners.slice(0, 8);
   
-  {
-    name: 'HP',
-    logo: hp,
-    desc: 'Technology Partner',
-  },
-  {
-    name: 'Array Networks',
-    logo: array,
-    desc: 'Application Delivery & Security Partner',
-  },
- {
-    name: 'Samsung',
-    logo: samsung,
-    desc: 'Technology Partner',
-  },
-  {
-    name: 'CloudBolt',
-    logo: cloudbolt,
-    desc: 'Hybrid Cloud Partner',
-  },
-  {
-    name: 'D-Link',
-    logo: dlink,
-    desc: 'Networking Infrastructure Partner',
-  },
-  {
-    name: 'EDB PostgreSQL',
-    logo: edb,
-    desc: 'Database Solutions Partner',
-  },
-  {
-    name: 'Epson',
-    logo: epson,
-    desc: 'Printing Solutions Partner',
-  },
-  {
-    name: 'Hewlett Packard Enterprise',
-    logo: hpe,
-    desc: 'Enterprise Solutions Partner',
-  },
-  
-  {
-    name: 'IFS',
-    logo: ifs,
-    desc: 'ERP Solutions Partner',
-  },
-  
-  {
-    name: 'Iron Mountain',
-    logo: iron,
-    desc: 'Data Management Partner',
-  },
-  
-  {
-    name: 'Nutanix',
-    logo: nutanix,
-    desc: 'Cloud Infrastructure Partner',
-  },
-  {
-    name: 'OpenText',
-    logo: opentext,
-    desc: 'Information Management Partner',
-  },
-  {
-    name: 'Oracle',
-    logo: oracle,
-    desc: 'Enterprise Software Partner',
-  },
-  {
-    name: 'Palo Alto Networks',
-    logo: paloalto,
-    desc: 'Cybersecurity Partner',
-  },
-  {
-    name: 'Red Hat',
-    logo: redhat,
-    desc: 'Open Source Solutions Partner',
-  },
-  
-  {
-    name: 'SAP',
-    logo: sap,
-    desc: 'Enterprise Resource Planning Partner',
-  },
-  {
-    name: 'Tata Consultancy Services',
-    logo: tcs,
-    desc: 'Implementation Partner',
-  },
-  {
-    name: 'Versa Networks',
-    logo: versa,
-    desc: 'SD-WAN Partner',
-  },
-  {
-    name: 'VMware',
-    logo: vmware,
-    desc: 'Virtualization Partner',
-  },
-  {
-  name: 'Globus',
-  logo: globus,
-  desc: 'Enterprise IT & Infrastructure Solutions Partner',
-},
-{
-  name: 'PeopleLink',
-  logo: people,
-  desc: 'Unified Communications & Collaboration Partner',
-},
-{
-  name: 'Acer',
-  logo: acer,
-  desc: 'Commercial Computing & Hardware Solutions Partner',
-},
-{
-  name: 'Brother',
-  logo: brother,
-  desc: 'Printing & Office Automation Solutions Partner',
-},
+  const [selectedPartner, setSelectedPartner] = useState<typeof partners[number]>(partners[0]);
+  const [orbitAngle, setOrbitAngle] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
-];
+  // Slowly rotate the orbit in the background
+  useEffect(() => {
+    if (isPaused) return;
+    const interval = setInterval(() => {
+      setOrbitAngle((prev) => (prev + 0.15) % 360);
+    }, 50);
+    return () => clearInterval(interval);
+  }, [isPaused]);
 
-/* ========== CLIENT DATA ========== */
-
-const clients = [
-  { name: 'Client 1', logo: c1 },
-  { name: 'Client 2', logo: c2 },
-  { name: 'Client 3', logo: c3 },
-  { name: 'Client 4', logo: c4 },
-  { name: 'Client 5', logo: c5 },
-  { name: 'Client 6', logo: c6 },
-  { name: 'Client 7', logo: c7 },
-  { name: 'Client 8', logo: c8 },
-  { name: 'Client 9', logo: c9 },
-  { name: 'Client 10', logo: c10 },
-  { name: 'Client 11', logo: c11 },
-  { name: 'Client 12', logo: c12 },
-  { name: 'Client 13', logo: c13 },
-  { name: 'Client 14', logo: c14 },
-  { name: 'Client 15', logo: c15 },
-  { name: 'Client 16', logo: c16 },
-  { name: 'Client 17', logo: c17 },
-  { name: 'Client 18', logo: c18 },
-  { name: 'Client 19', logo: c19 },
-  { name: 'Client 20', logo: c20 },
-  { name: 'Client 21', logo: c21 },
-  { name: 'Client 22', logo: c22 },
-  { name: 'Client 23', logo: c23 },
-];
-
-/* ========== COMPONENT ========== */
-
-export default function Partners() {
   return (
-    <Layout>
-      <section className="pt-32 pb-20 relative overflow-hidden">
+    <div className="relative">
+      
+      {/* BANNER HEADER (DARK THEME) */}
+      <section className="relative pt-36 pb-16 overflow-hidden">
+        {/* Glow overlay */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-brand-blue/5 rounded-full blur-[150px] pointer-events-none" />
 
-        {/* Background */}
-        <div className="absolute inset-0 tech-grid opacity-30" />
-        <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+          <SectionHeader
+            badge="Ecosystem Integration"
+            title="Trusted Technology"
+            titleGradient="Partners"
+            description="We collaborate with world-class technology leaders to engineer scalable, secure, and resilient enterprise infrastructures."
+            align="center"
+          />
+        </div>
+      </section>
 
-        <div className="container-custom relative z-10">
+      {/* SECTION 1: INTERACTIVE CIRCULAR ORBIT (DARK THEME) */}
+      <section className="py-12 bg-[#09090b] relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid opacity-30 pointer-events-none" />
+        
+        {/* Glow background */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-blue/5 rounded-full blur-[120px] pointer-events-none" />
 
-          {/* Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-16"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center">
+          
+          <ScrollReveal direction="up" className="mb-8 text-center max-w-xl">
+            <h2 className="text-xl font-bold text-white mb-2">Interactive Ecosystem Orbit</h2>
+            <p className="text-sm text-gray-400 font-semibold">Hover to pause, click on any partner logo floating in the concentric orbit to view their integration role details.</p>
+          </ScrollReveal>
+
+          {/* Interactive Concentric Orbit Ring Box */}
+          <div 
+            className="relative w-full max-w-[650px] h-[450px] sm:h-[500px] md:h-[550px] flex items-center justify-center mb-12 scale-[0.65] min-[400px]:scale-[0.75] sm:scale-90 md:scale-100 origin-center transition-all duration-300"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
           >
-            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-              Our Partners
-            </span>
-
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Trusted <span className="gradient-text">Technology Partners</span>
-            </h1>
-
-            <p className="text-muted-foreground max-w-3xl mx-auto">
-              We collaborate with world-class technology leaders to deliver
-              innovative, scalable, and secure solutions.
-            </p>
-          </motion.div>
-
-          {/* Partners */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-20"
-          >
-            <h2 className="text-2xl font-bold text-center mb-10">
-              Our Technology Partners
-            </h2>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-
-              {partners.map((item, i) => (
-                <motion.div
-                  key={`${item.name}-${i}`}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: i * 0.05 }}
-                  className="glow-card p-6 flex flex-col items-center text-center hover:scale-105 transition"
-                >
-                  <img
-                    src={item.logo}
-                    alt={item.name}
-                    className="h-16 object-contain mb-4"
-                  />
-
-                  <h3 className="font-semibold mb-1">
-                    {item.name}
-                  </h3>
-
-                  <p className="text-sm text-muted-foreground">
-                    {item.desc}
-                  </p>
-                </motion.div>
-              ))}
-
+            
+            {/* Concentric Guide Rings */}
+            <div className="absolute w-[440px] h-[440px] border border-dashed border-white/10 rounded-full pointer-events-none animate-spin-slow" style={{ animationDuration: '60s' }} />
+            <div className="absolute w-[280px] h-[280px] border border-dashed border-white/10 rounded-full pointer-events-none animate-spin-slow" style={{ animationDuration: '40s', animationDirection: 'reverse' }} />
+            
+            {/* Center Focus Card (PS Associates Logo + Selected Partner Info) */}
+            <div className="relative z-20 w-52 h-52 rounded-full glass-panel border border-brand-blue/20 flex flex-col items-center justify-center p-6 text-center shadow-[0_0_50px_rgba(37,99,235,0.15)] animate-pulse-slow">
+              <div className="w-20 h-20 rounded-2xl border border-brand-blue/30 mb-3 bg-white flex items-center justify-center p-2 relative shadow-lg">
+                <img
+                  src={selectedPartner.logo}
+                  alt={selectedPartner.name}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <h3 className="font-extrabold text-sm text-white mb-1 line-clamp-1">{selectedPartner.name}</h3>
+              <p className="text-[10px] text-brand-blue font-bold uppercase tracking-wider line-clamp-2 leading-relaxed px-1">
+                {selectedPartner.desc}
+              </p>
             </div>
-          </motion.div>
 
-          {/* Clients */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="glow-card p-8 mx-12"
-          >
-            <h2 className="text-2xl font-bold text-center mb-10">
-              Our Clientele
-            </h2>
+            {/* Orbiting Partner Nodes */}
+            {orbitPartners.map((partner, idx) => {
+              // Calculate positioning coordinates around the circle
+              const startAngle = (idx * 2 * Math.PI) / orbitPartners.length;
+              const angleInRad = startAngle + (orbitAngle * Math.PI) / 180;
+              const radius = 220; // Radius of orbit
+              const x = Math.cos(angleInRad) * radius;
+              const y = Math.sin(angleInRad) * radius;
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 items-center">
+              const isSelected = selectedPartner.name === partner.name;
 
-              {clients.map((client, i) => (
-                <motion.div
-                  key={`client-${i}`}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: i * 0.08 }}
-                  className="flex items-center justify-center p-4"
+              return (
+                <div
+                  key={idx}
+                  className="absolute transition-transform duration-300 ease-out z-10"
+                  style={{
+                    transform: `translate(${x}px, ${y}px)`,
+                  }}
                 >
-                  <img
-                    src={client.logo}
-                    alt={client.name}
-                    className="h-20 object-contain grayscale-0 hover:grayscale transition"
-                  />
-                </motion.div>
-              ))}
+                  <button
+                    onClick={() => setSelectedPartner(partner)}
+                    className={`animate-float-node w-14 h-14 rounded-full flex items-center justify-center p-2.5 transition-all duration-300 border focus:outline-none cursor-pointer shadow-md bg-white hover:bg-gray-50 ${
+                      isSelected
+                        ? 'border-brand-blue ring-4 ring-brand-blue/30 shadow-[0_0_25px_rgba(37,99,235,0.5)] scale-110 !z-30'
+                        : 'border-white/20 hover:border-brand-blue/30'
+                    }`}
+                    style={{
+                      animationDelay: `${idx * 0.4}s`,
+                      animationDuration: `${3.5 + (idx % 3) * 0.8}s`
+                    }}
+                    title={partner.name}
+                  >
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="w-full h-full object-contain"
+                    />
+                  </button>
+                </div>
+              );
+            })}
 
-            </div>
-          </motion.div>
+            {/* Subtle inner nodes floating close */}
+            {partners.slice(8, 12).map((partner, idx) => {
+              const startAngle = (idx * 2 * Math.PI) / 4 + Math.PI / 4;
+              const angleInRad = startAngle - (orbitAngle * 1.5 * Math.PI) / 180; // Rotates opposite way
+              const radius = 140; // Closer radius
+              const x = Math.cos(angleInRad) * radius;
+              const y = Math.sin(angleInRad) * radius;
+
+              const isSelected = selectedPartner.name === partner.name;
+
+              return (
+                <div
+                  key={idx + 8}
+                  className="absolute transition-transform duration-300 ease-out z-10"
+                  style={{
+                    transform: `translate(${x}px, ${y}px)`,
+                  }}
+                >
+                  <button
+                    onClick={() => setSelectedPartner(partner)}
+                    className={`animate-float-node w-11 h-11 rounded-full flex items-center justify-center p-2 transition-all duration-300 border focus:outline-none cursor-pointer shadow-md bg-white hover:bg-gray-50 ${
+                      isSelected
+                        ? 'border-brand-blue ring-4 ring-brand-blue/30 shadow-[0_0_20px_rgba(37,99,235,0.5)] scale-110 !z-30'
+                        : 'border-white/20 hover:border-brand-blue/30'
+                    }`}
+                    style={{
+                      animationDelay: `${(idx + 4) * 0.4}s`,
+                      animationDuration: `${3 + (idx % 2) * 1}s`
+                    }}
+                    title={partner.name}
+                  >
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="w-full h-full object-contain"
+                    />
+                  </button>
+                </div>
+              );
+            })}
+          </div>
 
         </div>
       </section>
-    </Layout>
+
+      {/* SECTION 2: FULL ALLIANCE DIRECTORY GRID (MATTE WHITE THEME) */}
+      <section className="py-24 bg-[#fafafa] text-brand-dark border-t border-black/5 relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-light opacity-30 pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+          
+          <SectionHeader
+            badge="Alliance Directory"
+            title="Technology Partner"
+            titleGradient="Network"
+            description="Our full cooperative network of hardware manufacturers, cloud hyper-scalers, and enterprise software engineering leaders."
+            align="center"
+            light={true}
+            className="mb-20"
+          />
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
+            {partners.map((partner, idx) => (
+              <ScrollReveal key={idx} direction="up" delay={idx * 30}>
+                <div 
+                  onClick={() => setSelectedPartner(partner)}
+                  className="glass-panel-light p-6 rounded-3xl border border-black/5 hover:border-black/10 card-lift flex flex-col items-center text-center group cursor-pointer h-full justify-between min-h-[200px]"
+                >
+                  <div className="h-14 flex items-center justify-center mb-4">
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="max-h-12 object-contain transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="font-extrabold text-brand-dark text-base mb-1 group-hover:text-brand-blue transition-colors duration-300">
+                      {partner.name}
+                    </h3>
+                    <p className="text-gray-500 text-xs font-semibold leading-relaxed px-2">
+                      {partner.desc}
+                    </p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* SECTION 3: CLIENTELE MATRIX (DARK THEME) */}
+      <section className="py-24 bg-[#09090b] relative overflow-hidden border-t border-white/5">
+        <div className="absolute inset-0 bg-grid opacity-30 pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-red/5 rounded-full blur-[120px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          
+          <SectionHeader
+            badge="Enterprise Portfolio"
+            title="Our Trusted"
+            titleGradient="Clientele"
+            description="Empowering government departments, banking institutions, and large-scale enterprises with absolute process integrity."
+            align="center"
+            className="mb-20"
+          />
+
+          {/* Client Logo Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center max-w-6xl mx-auto">
+            {clients.map((client, idx) => (
+              <ScrollReveal key={idx} direction="up" delay={idx * 25}>
+                <div className="glass-panel p-4 h-24 rounded-2xl flex items-center justify-center border border-white/5 hover:border-white/10 hover:bg-white/10 transition-all duration-300 group">
+                  <img
+                    src={client.logo}
+                    alt={client.name}
+                    className="max-h-14 object-contain opacity-100 group-hover:scale-105 transition-all duration-300"
+                  />
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+    </div>
   );
-}
+};
+export default Partners;

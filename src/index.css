@@ -2,152 +2,154 @@
 @tailwind components;
 @tailwind utilities;
 
-/* PS Associates - Clean Corporate Theme */
-
 @layer base {
   :root {
-    /* Background */
-    --background: 40 20% 97%;
-    --foreground: 220 15% 20%;
-
-    /* Cards */
-    --card: --card: 0 0% 99%;
-    --card-foreground: 220 15% 20%;
-
-    /* Primary (Blue Theme) */
-    --primary: 215 90% 45%;
-    --primary-dark: 220 85% 30%;
-    --primary-foreground: 0 0% 100%;
-
-    /* Accent (Orange → Red Theme) */
-    --accent: 24 95% 55%;
-    --accent-dark: 5 80% 50%;
-    --accent-foreground: 0 0% 100%;
-
-    /* Secondary */
-    --secondary: 210 20% 96%;
-    --secondary-foreground: 220 15% 25%;
-
-    /* Muted */
-    --muted: 210 20% 94%;
-    --muted-foreground: 215 15% 45%;
-
-    /* Border */
-    --border: 40 15% 88%;
-    --input: 210 15% 85%;
-    --ring: 215 90% 45%;
-
-    --radius: 0.5rem;
+    color-scheme: dark;
   }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
-  }
-
+  
   html {
     scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    background-color: #09090b; /* Near Black */
+    color: #ffffff;
+    overflow-x: hidden;
   }
 }
 
-/* ================= COMPONENTS ================= */
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
 
-@layer components {
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
 
-  /* Blue Gradient (For Headings / Sections) */
-  .blue-gradient {
-    background: linear-gradient(
-      135deg,
-      #1e88e5 0%,
-      #0d47a1 100%
-    );
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Glassmorphism panel styling */
+.glass-panel {
+  background: rgba(15, 15, 20, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Glassmorphism for light background sections */
+.glass-panel-light {
+  background: rgba(250, 250, 250, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.glass-panel-light:hover {
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+/* Noise overlay texture */
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.02;
+}
+
+/* Ambient glow background grids */
+.ambient-glow-blue {
+  background: radial-gradient(circle at center, rgba(37, 99, 235, 0.15) 0%, rgba(37, 99, 235, 0) 70%);
+}
+
+.ambient-glow-red {
+  background: radial-gradient(circle at center, rgba(220, 38, 38, 0.12) 0%, rgba(220, 38, 38, 0) 70%);
+}
+
+.ambient-glow-green {
+  background: radial-gradient(circle at center, rgba(22, 163, 74, 0.1) 0%, rgba(22, 163, 74, 0) 70%);
+}
+
+/* Grid overlay background */
+.bg-grid {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+.bg-grid-light {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+}
+
+/* Custom clip-pulse for radar sweep */
+.clip-pulse {
+  clip-path: ellipse(60% 60% at 50% 50%);
+}
+
+/* Text glow */
+.text-glow-blue {
+  text-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
+}
+
+.text-glow-red {
+  text-shadow: 0 0 20px rgba(220, 38, 38, 0.4);
+}
+
+/* Interactive card transitions */
+.card-lift {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-6px);
+}
+
+/* Organic float animation for orbit nodes */
+@keyframes float-node {
+  0%, 100% {
+    transform: translateY(0px);
   }
-
-  /* Orange-Red Gradient (For Buttons / CTA) */
-  .orange-gradient {
-    background: linear-gradient(
-      135deg,
-      #ff9800 0%,
-      #e53935 100%
-    );
-  }
-
-  /* Gradient Text (Blue Only) */
-  .gradient-text {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(
-      135deg,
-      #1e88e5,
-      #0d47a1
-    );
-  }
-
-  /* Cards */
-  .glow-card {
-    @apply relative rounded-xl border border-border bg-card p-6;
-    box-shadow: 0 2px 12px rgba(214, 56, 56, 0.08);
-    transition: all 0.25s ease;
-  }
-
-  .glow-card:hover {
-    box-shadow: 0 4px 20px rgb(0 0 0 / 0.12);
-    transform: translateY(-2px);
-  }
-
-  /* Buttons (Orange → Red Only) */
-  .glow-button {
-    @apply rounded-lg px-6 py-3 font-semibold text-white;
-    background: linear-gradient(
-      135deg,
-      #ff9800 0%,
-      #e53935 100%
-    );
-    transition: all 0.25s ease;
-  }
-
-  .glow-button:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
-  }
-
-  /* Section Background (Blue) */
-  .section-blue {
-    background: linear-gradient(
-      135deg,
-      #1e88e5 0%,
-      #1565c0 100%
-    );
-    color: white;
-  }
-
-  /* Light Grid */
-  .tech-grid {
-    background-image:
-      linear-gradient(rgb(0 0 0 / 0.02) 1px, transparent 1px),
-      linear-gradient(90deg, rgb(0 0 0 / 0.02) 1px, transparent 1px);
-    background-size: 60px 60px;
-  }
-
-  /* Layout Helpers */
-  .section-padding {
-    @apply py-20 md:py-28;
-  }
-
-  .container-custom {
-    @apply container mx-auto px-4 md:px-6 lg:px-8;
+  50% {
+    transform: translateY(-6px);
   }
 }
 
-/* ================= UTILITIES ================= */
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.animate-float-node {
+  animation: float-node 4s ease-in-out infinite;
 }
+
+/* Timeline drawing line animation */
+@keyframes draw-line {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+.animate-timeline-line {
+  animation: draw-line 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Infinite horizontal marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+}
+

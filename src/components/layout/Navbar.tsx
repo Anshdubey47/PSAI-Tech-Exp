@@ -1,160 +1,158 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import logo from '@/assets/logo.png';
-const navLinks = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Services', href: '/services' },
-  { name: 'Products', href: '/products' },
-  { name: 'Industries', href: '/industries' },
-  { name: 'Partners', href: '/partners' },
-  { name: 'Gallery', href: '/gallery' },
-  { name: 'Contact', href: '/contact' },
-];
+import { Menu, X, ArrowRight } from 'lucide-react';
+import { clsx } from 'clsx';
 
-export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+export const Navbar: React.FC = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Close mobile menu on route change
   useEffect(() => {
-    setIsMobileMenuOpen(false);
-  }, [location]);
+    setMobileOpen(false);
+  }, [location.pathname]);
+
+  const navItems = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'Solutions', path: '/solutions' },
+    { name: 'Partners', path: '/partners' },
+    { name: 'Gallery', path: '/gallery' },
+    { name: 'Contact', path: '/contact' },
+  ];
 
   return (
-   <nav
-  className={cn(
-    'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-    'bg-[#0f2f7a] border-b border-white/10 shadow-lg'
-  )}
->
-      <div className="container-custom">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="relative"
-            >
+    <>
+      <header
+        className={clsx(
+          'fixed left-0 right-0 z-50 transition-all duration-500 flex justify-center px-4',
+          scrolled ? 'top-3 md:top-4' : 'top-5 md:top-6'
+        )}
+      >
+        {/* Main Pill Wrapper */}
+        <div
+          className={clsx(
+            'w-full max-w-6xl rounded-full glass-panel flex items-center justify-between transition-all duration-500 shadow-xl',
+            scrolled 
+              ? 'py-2 px-4 md:px-6 bg-brand-dark/80 border-white/10' 
+              : 'py-3.5 px-6 md:px-8 bg-[#0a0f1c]/40 border-white/5'
+          )}
+        >
+          {/* Logo Pill Section (Left) */}
+          <Link to="/" className="flex items-center gap-3 group">
+            <div className="relative w-9 h-9 md:w-10 md:h-10 rounded-full overflow-hidden border border-white/20 bg-brand-dark group-hover:scale-105 group-hover:border-brand-blue/50 transition-all duration-300">
               <img
-                src={logo}
+                src="/logo.png"
                 alt="PS Associates Logo"
-              className="w-10 h-10 rounded-lg object-cover"
+                className="w-full h-full object-cover"
               />
-            <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary to-accent blur-lg opacity-50 group-hover:opacity-75 transition-opacity" />
-            </motion.div>
+            </div>
             <div className="flex flex-col">
-              <span className="font-bold text-lg text-white">PS Associates</span>
-              <span className="text-xs text-white/70 hidden sm:block">IT Hardware & Services</span>
+              <span className="font-bold text-sm md:text-base tracking-tight text-white group-hover:text-brand-blue transition-colors duration-300">
+                PS Associates
+              </span>
+              <span className="text-[9px] md:text-[10px] text-gray-400 font-semibold tracking-wider uppercase -mt-0.5 hidden sm:inline-block">
+                IT & Manpower
+              </span>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                className={cn(
-                  'relative px-4 py-2 text-sm font-medium transition-colors rounded-lg',
-                  location.pathname === link.href
-                     ? 'text-white font-semibold'
-                     : 'text-white/80 hover:text-white'
-                )}
-              >
-                {link.name}
-                {location.pathname === link.href && (
-                  <motion.div
-                    layoutId="navbar-indicator"
-                    className="absolute inset-0 bg-white/10 rounded-lg -z-10"
-                    transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-                  />
-                )}
-              </Link>
-            ))}
-          </div>
+          {/* Links Section (Center) */}
+          <nav className="hidden md:flex items-center gap-1 bg-white/5 border border-white/5 rounded-full p-1">
+            {navItems.map((item) => {
+              const isActive = location.pathname === item.path;
+              return (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className={clsx(
+                    'relative px-5 py-2 rounded-full text-xs font-semibold tracking-wide transition-all duration-300',
+                    isActive 
+                      ? 'text-white bg-white/10' 
+                      : 'text-gray-400 hover:text-white'
+                  )}
+                >
+                  {item.name}
+                  {isActive && (
+                    <span className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-brand-blue rounded-full shadow-[0_0_8px_rgba(37,99,235,0.8)]" />
+                  )}
+                </Link>
+              );
+            })}
+          </nav>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Link to="/contact">
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="glow-button text-primary-foreground text-sm"
-              >
-                Get Quote
-              </motion.button>
+          {/* CTA / Action Section (Right) */}
+          <div className="flex items-center gap-3">
+            <Link
+              to="/contact"
+              className="hidden sm:inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-brand-blue text-white text-xs font-bold hover:bg-blue-500 hover:shadow-lg hover:shadow-brand-blue/20 transition-all duration-300 border border-brand-blue/30 group"
+            >
+              Get Started
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
             </Link>
-          </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-foreground hover:text-orange-300 transition-colors"
+            {/* Mobile Hamburger Toggle */}
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="md:hidden w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-white/10 transition-colors"
+              aria-label="Toggle menu"
+            >
+              {mobileOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Mobile Menu Overlay Drawer */}
+      <div
+        className={clsx(
+          'fixed inset-0 z-40 bg-brand-dark/95 backdrop-blur-2xl transition-all duration-500 flex flex-col justify-center px-8 md:hidden',
+          mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        )}
+      >
+        <div className="absolute top-28 left-12 w-64 h-64 bg-brand-blue/10 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-28 right-12 w-64 h-64 bg-brand-red/5 rounded-full blur-[100px] pointer-events-none" />
+
+        <div className="flex flex-col gap-6 max-w-sm mx-auto w-full relative z-10">
+          {navItems.map((item, index) => {
+            const isActive = location.pathname === item.path;
+            return (
+              <Link
+                key={item.name}
+                to={item.path}
+                style={{
+                  transitionDelay: `${index * 50}ms`,
+                }}
+                className={clsx(
+                  'text-3xl font-extrabold tracking-tight transition-all duration-300 py-2 border-b border-white/5 flex items-center justify-between group',
+                  mobileOpen ? 'translate-x-0 opacity-100' : '-translate-x-8 opacity-0',
+                  isActive ? 'text-brand-blue' : 'text-gray-300 hover:text-white'
+                )}
+              >
+                <span>{item.name}</span>
+                <ArrowRight className="w-6 h-6 opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all text-brand-blue" />
+              </Link>
+            );
+          })}
+          
+          <Link
+            to="/contact"
+            className="mt-6 w-full py-4 rounded-full bg-brand-blue text-white font-bold text-center hover:bg-blue-500 transition-colors shadow-lg shadow-brand-blue/20"
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            Get in Touch
+          </Link>
         </div>
       </div>
-
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-[#0f2f7a] border-b border-white/10"
-          >
-            <div className="container-custom py-4 space-y-2">
-              {navLinks.map((link, index) => (
-                <motion.div
-                  key={link.name}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.05 }}
-                >
-                  <Link
-                    to={link.href}
-                    className={cn(
-                      'block px-4 py-3 rounded-lg text-sm font-medium transition-colors',
-                      location.pathname === link.href
-                           ? 'bg-white/10 text-white font-semibold'
-                           : 'text-white/80 hover:text-white hover:bg-white/10'
-                    )}
-                  >
-                    {link.name}
-                  </Link>
-                </motion.div>
-              ))}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: navLinks.length * 0.05 }}
-                className="pt-2"
-              >
-                <Link to="/contact" className="block">
-                  <button className="w-full glow-button text-primary-foreground text-sm">
-                    Get Quote
-                  </button>
-                </Link>
-              </motion.div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
+    </>
   );
-}
+};
